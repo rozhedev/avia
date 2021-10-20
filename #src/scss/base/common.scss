@@ -1,0 +1,59 @@
+body {
+	font-family: $fontFamily, sans-serif;
+	font-size: $fontSize + px;
+	font-weight: 500;
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+.page {
+	flex: 1 1 auto;
+}
+
+.section {
+	padding-top: 96px;
+}
+
+.title {
+	@include titleStyle;
+	margin-bottom: 56px;
+
+	@media screen and (max-width: $littleTablet) {
+		margin-top: 48px;
+	}
+}
+
+.subtitle {
+	@include subtitleStyle;
+}
+
+.descr {
+	@include descrStyle;
+}
+
+.navlink {
+	@include navLinkStyle;
+}
+
+.btn {
+	@include btnStyle;
+}
+
+// .top-up {
+// 	opacity: 0;
+// 	overflow: hidden;
+// 	position: fixed;
+// 	width: 48px;
+// 	height: 48px;
+// 	font-size: 24px;
+// 	right: 64px;
+// 	bottom: 64px;
+// 	outline: 4px solid $light;
+// 	box-shadow: none !important;
+
+// 	@media screen and (max-width: $littleTablet + px) {
+// 		right: 48px;
+// 		bottom: 48px;
+// 	}
+// }

@@ -1,0 +1,45 @@
+@use "sass:math";
+
+//<VARIABLES>=======================================
+@import "base/variables.scss";
+
+//<MIXINS>==========================================
+@import "base/mixins.scss";
+
+//<FONTS>===========================================
+//&display=swap&subset=cyrillic-ext
+@import "base/fonts.scss";
+
+//<ICON FONTS>======================================
+@import "base/icons.scss";
+
+//<NULLSTYLE & COMMON STYLES>=======================
+@import "base/null.scss";
+@import "base/common.scss";
+
+//<GRID & CONTAINER>================================
+@import "base/grid.scss";
+
+//<UI & DONE CLASSES>===============================
+@import "base/ui.scss";
+
+//<FORMS & COMPONENTS>==============================
+@import "components/preloader.scss";
+// @import "components/forms.scss";
+// @import "components/datepicker.scss";
+// @import "components/lightgallery.scss";
+// @import "components/pagging.scss";
+// @import "components/popup.scss";
+// @import "components/support.scss";
+
+// Other connections situated on docs/readme.txt
+
+//<TEMPLATES>=======================================
+@import "templates/header.scss";
+@import "templates/footer.scss";
+
+//<HOME SECTIONS>===================================
+@import "home/main.scss";
+@import "home/about.scss";
+
+//<PAGES>===========================================
