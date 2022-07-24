@@ -1,0 +1,27 @@
+.aside-item {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: $divider;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__img {
+        display: block;
+        width: 72px;
+        height: 72px;
+        border-radius: 10px;
+    }
+    &__title {
+        line-height: 1.4;
+        margin-left: 12px;
+    }
+    &__info {
+        margin-top: 16px;
+        display: flex;
+        :first-child {
+            margin-right: 16px;
+        }
+    }
+}

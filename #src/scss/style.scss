@@ -1,7 +1,7 @@
 @use "sass:math";
 
 //<VARIABLES>=======================================
-@import "base/variables.scss";
+@import "base/vars.scss";
 
 //<MIXINS>==========================================
 @import "base/mixins.scss";
@@ -9,9 +9,6 @@
 //<FONTS>===========================================
 //&display=swap&subset=cyrillic-ext
 @import "base/fonts.scss";
-
-//<ICON FONTS>======================================
-@import "base/icons.scss";
 
 //<NULLSTYLE & COMMON STYLES>=======================
 @import "base/null.scss";
@@ -24,13 +21,28 @@
 @import "base/ui.scss";
 
 //<FORMS & COMPONENTS>==============================
-@import "components/preloader.scss";
-// @import "components/forms.scss";
-// @import "components/datepicker.scss";
-// @import "components/lightgallery.scss";
-// @import "components/pagging.scss";
-// @import "components/popup.scss";
-// @import "components/support.scss";
+
+// <.STATIC>
+@import "components/static/profile.scss";
+@import "components/static/activity.scss";
+@import "components/static/banner.scss";
+@import "components/static/article-content.scss";
+@import "components/static/comments-item.scss";
+@import "components/static/aside.scss";
+@import "components/static/aside-item.scss";
+
+@import "components/static/main-post.scss";
+@import "components/static/news-aside.scss";
+@import "components/static/news-card.scss";
+@import "components/static/aside-comment.scss";
+
+@import "components/static/advantages-item.scss";
+
+// <.DYNAMIC>
+@import "components/dynamic/form.scss";
+@import "components/dynamic/news-submenu.scss";
+@import "components/dynamic/news-categories.scss";
+@import "components/dynamic/pagination.scss";
 
 // Other connections situated on docs/readme.txt
 
@@ -38,8 +50,10 @@
 @import "templates/header.scss";
 @import "templates/footer.scss";
 
-//<HOME SECTIONS>===================================
-@import "home/main.scss";
-@import "home/about.scss";
+// <HOME>===========================================
+@import "main/home.scss";
+@import "main/search-table.scss";
 
 //<PAGES>===========================================
+@import "pages/news.scss";
+@import "pages/typical.scss";

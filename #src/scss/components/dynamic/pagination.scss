@@ -1,0 +1,73 @@
+.pagination {
+    margin: 40px 0 20px;
+    &__list {
+        display: flex;
+        background-color: $white;
+        padding: 8px;
+        width: 460px;
+        border-radius: 999px;
+
+        @media screen and (max-width: $phone + px) {
+            width: 100%;
+        }
+
+        &-item {
+            margin: 0 4px;
+            list-style: none;
+
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+
+            color: $dark;
+            cursor: pointer;
+            border-radius: 999px;
+            transition: $transition;
+
+            &.num {
+                width: 28px;
+                height: 28px;
+                padding: 8px 6px;
+            }
+
+            &.first {
+                margin: 0px 8px 0 0;
+            }
+            &.last {
+                margin: 0 0 0 8px;
+            }
+            &.dots {
+                font-size: 22px;
+                cursor: default;
+            }
+            &.btn {
+                padding: 0 20px;
+            }
+            &.prev,
+            &.next {
+                border-radius: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background-color: $blue;
+                    color: $white;
+                    box-shadow: $hoverShadow;
+
+                    div {
+                        border: none;
+                    }
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+            &._active,
+            &.num:hover {
+                background-color: $blue;
+                color: $white;
+            }
+        }
+    }
+}

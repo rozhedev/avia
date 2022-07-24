@@ -1,0 +1,51 @@
+.main-post {
+    background: url('../img/photos/article-img.jpg') center / cover no-repeat;
+    width: 843px;
+    height: 554px;
+    border-radius: 14px;
+    position: relative;
+
+    &__inner {
+        position: absolute; 
+        top: 208px;
+        left: 0;
+        width: 555px;
+        padding: 36px 52px;
+        background-color: $white;
+        border-radius: 0 14px 14px 0;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media screen and (max-width: $bigTablet + px) {
+        width: 66.66%;
+        min-width: 640px;
+    }
+    @media screen and (max-width: $littleTablet + px) {
+        width: 100%;
+    }
+    @media screen and (max-width: $foldPhone + px) {
+        min-width: 336px;
+        &__inner {
+            width: 100%;
+            padding: 36px 18px;
+            border-radius: 0;
+        }
+    }
+    @media screen and (max-width: $phone + px) {
+        &__inner {
+            top: 120px; 
+        }
+        &__info {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .profile {
+                margin: 16px 0;
+            }
+        }
+    }
+}

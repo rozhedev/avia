@@ -1,0 +1,28 @@
+.news-categories {
+    width: 275px;
+    height: 32px;
+    background-color: $lightGrey;
+    border-radius: 999px;
+    margin-bottom: 40px;
+    padding: 0 4px;
+
+    &__item {
+        font-family: "SFProDisplay";
+        display: inline-block;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 500;
+
+        padding: 0 10px;
+
+        &:hover {
+            color: $blue;
+        }
+        &._active {
+            background-color: $blue;
+            padding: 7px 15px;
+            color: $white;
+            border-radius: 999px;
+        }
+    }
+}

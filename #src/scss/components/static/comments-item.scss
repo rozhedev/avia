@@ -1,0 +1,41 @@
+.comments-item {
+    margin-top: 50px;
+    padding-bottom: 15px;
+    border-bottom: $divider;
+
+    &__name {
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 600;
+    }
+    &__text {
+        margin: 12px 0 14px;
+    }
+    &__btn {
+        font-weight: 500;
+        display: inline-block;
+        color: $blue;
+
+        &:hover {
+            &::before {
+                background-color: $blue;
+            }
+        }
+    }
+}
+
+.comments-item--answer {
+    margin-top: 30px;
+    padding: 0 0 0 30px;
+    border-left: $divider;
+    border-bottom: none;
+
+    &::after {
+        content: '';
+        margin-top: 15px;
+        display: block;
+        height: 1px;
+        width: calc(100% - 30px);
+        background-color: $lightGrey;
+    }
+}

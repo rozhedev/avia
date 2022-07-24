@@ -1,50 +1,17 @@
-@mixin titleStyle {
-	
-
-	@media screen and (max-width: $bigTablet + px) {
-		
-	}
-	@media screen and (max-width: $littleTablet + px) {
-		
-	}
-	@media screen and (max-width: $phone + px) {
-		
-	}
-}
-
 @mixin btnStyle {
 	
 
-	&:hover {
+	// &:hover {
 		
-	}
-	@media screen and (max-width: $bigTablet + px) {
-		&:hover {
-			// box-shadow: none;
-		}
-	}
-	@media screen and (max-width: $littleTablet + px) {
+	// }
+	// @media screen and (max-width: $bigTablet + px) {
+	// 	&:hover {
+	// 		// box-shadow: none;
+	// 	}
+	// }
+	// @media screen and (max-width: $littleTablet + px) {
 		
-	}
-}
-
-@mixin subtitleStyle {
-	
-	
-	@media screen and (max-width: $bigTablet + px) {
-		
-	}
-	@media screen and (max-width: $littleTablet + px) {
-		
-	}
-}
-
-@mixin navLinkStyle {
-	
-}
-
-@mixin descrStyle {
-	
+	// }
 }
 
 //Подключение шрифта

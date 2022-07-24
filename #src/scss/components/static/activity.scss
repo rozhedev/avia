@@ -1,0 +1,16 @@
+.activity {
+    display: flex;
+    align-items: center;
+    &__item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &:not(:first-child) {
+            margin-left: 26px;
+        }
+
+        &-num {
+            margin-left: 4px;
+        }
+    }
+}

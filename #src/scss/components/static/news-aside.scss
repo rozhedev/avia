@@ -1,0 +1,89 @@
+.news-aside {
+    margin-left: 30px;
+
+    &__info {
+        margin: 10px 0 6px;
+    }
+    &__item-cont {
+        .aside-item {
+            margin-top: 20px;
+            margin-bottom: 0;
+
+            &:nth-child(2) {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+            &:first-child {
+                @media screen and (max-width: $littleTablet + px) {
+                    margin-top: 0;
+                }
+                @media screen and (max-width: $foldPhone + px) {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    .secondary-post {
+        &__img {
+            position: relative;
+            padding-bottom: 60.44%;
+
+            img {
+                border-radius: 15px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @media screen and (max-width: $bigTablet + px) {
+        width: 33.33%;
+        padding-left: 20px;
+        margin-left: 20px;
+    }
+    @media screen and (max-width: $littleTablet + px) {
+        width: 100%;
+
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 30px;
+        border-left: none;
+
+        .aside__inner {
+            display: flex;
+        }
+        .secondary-post {
+            margin-right: 30px;
+        }   
+    }
+    @media screen and (max-width: $foldPhone + px) {
+        .aside__inner {
+            flex-direction: column;
+        }
+    
+        .secondary-post {
+            margin-right: 0;
+        }
+        .news-aside__item-cont {
+            display: flex;
+            justify-content: space-between;
+        }
+        .aside-item {
+            width: 240px;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    }
+    @media screen and (max-width: $phone + px) {
+        .news-aside__item-cont {
+            flex-direction: column;
+        }
+        .aside-item {
+            width: 100%;
+        }
+    }
+}

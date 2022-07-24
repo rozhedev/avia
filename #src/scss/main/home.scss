@@ -1,0 +1,90 @@
+.home {
+    background: url("../img/photos/main/home_bg.jpg") center / cover no-repeat;
+    height: 800px;
+
+    &__inner {
+        position: relative;
+    }
+    &__titles {
+        width: 662px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+    }
+    &__title,
+    &__suptitle {
+        color: $white;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 70px;
+        line-height: 130%;
+        text-shadow: 0px 7px 16px rgba(0, 0, 0, 0.12);
+    }
+    &__suptitle {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 120%;
+    }
+}
+
+.advantages {
+    margin-top: -77px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+// * FAQ
+
+.faq {
+    margin-top: 217px;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 35px;
+    }
+}
+
+.faq-item {
+    width: 625px;
+    &__text {
+        margin-top: 14px;
+    }
+}
+
+// * AIRLINES
+
+.airlines {
+    margin: 140px 0;
+    &__content {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+}
+
+.airlines-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed $lightGrey;
+    
+    &__name {
+        background-color: $white;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        margin-bottom: -10px;
+    }
+    &__cost {
+        background-color: $white;
+        color: $blue;
+        padding-left: 10px;
+        margin-bottom: -10px;
+    }
+}

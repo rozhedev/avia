@@ -1,27 +1,201 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('_head.html',{
-"title":"Project"
+"title":"Авиабилеты"
 })
 
 <body>
-	<div class="wrapper">
-		<div class="preloader">
-			<div class="loader"></div>
-		</div>
+    <div class="wrapper">
+        <div class="preloader">
+            <div class="loader"></div>
+        </div>
 
-		@@include('_header.html',{})
+        <!-- * HEADER -->
+        @@include('_header.html',{})
 
-		<section class="main" id="main">
-			<div class="page _container">
-				
-			</div>
-		</section>
+        <div class="page">
+            <main class="main">
+                <section class="home">
+                    <div class="home__inner _container">
+                        <div class="home__titles">
+                            <div class="home__suptitle">Билет на самолёт</div>
+                            <h1 class="home__title h1">Из Новосибирска в Санкт-Петербург</h1>
+                        </div>
 
-		@@include('_footer.html',{})
-	</div>
-	
-	@@include('_js.html',{})
+                        <!-- * SEARCH TABLE -->
+
+                        <div class="search-table">
+                            <div class="search-table__inner">
+                                <div class="search-table__choose">
+                                    <nav class="news-categories search-table__choose-item">
+                                        <button class="news-categories__item">В одну сторону</button>
+                                        <button class="news-categories__item _active">Туда и обратно</button>
+                                    </nav>
+                                    <select name="" id="" class="select search-table__choose-item">
+                                        <option>Пересадки</option> 
+                                        <option>This is a native select element</option> 
+                                        <option>This is a native select element</option> 
+                                    </select>
+                                    <select name="" id="" class="select search-table__choose-item">
+                                        <option>Авиакомпания</option> 
+                                        <option>This is a native select element</option> 
+                                        <option>This is a native select element</option> 
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- * ADVANTAGES -->                
+
+                <section class="advantages">
+                    <div class="advantages__inner _container">
+                        <div class="advantages-item">
+                            <figure><img src="img/icons/main/advantages/tourist.svg" alt="tourist"
+                                    class="advantages-item__img"></figure>
+                            <div class="advantages-item__title">Lorem ipsum dolor</div>
+                            <div class="advantages-item__text text">Ut labore et dolore magna aliqua. Id velit ut tortor
+                                pretium viverra.</div>
+                        </div>
+                        <div class="advantages-item">
+                            <figure><img src="img/icons/main/advantages/cards.svg" alt="cards"
+                                    class="advantages-item__img"></figure>
+                            <div class="advantages-item__title">Lorem ipsum dolor</div>
+                            <div class="advantages-item__text text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna.</div>
+                        </div>
+                        <div class="advantages-item">
+                            <figure><img src="img/icons/main/advantages/plain.svg" alt="plain"
+                                    class="advantages-item__img"></figure>
+                            <div class="advantages-item__title">Lorem ipsum dolor</div>
+                            <div class="advantages-item__text text">Сonsectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. </div>
+                        </div>
+                        <div class="advantages-item">
+                            <figure><img src="img/icons/main/advantages/compass.svg" alt="compass"
+                                    class="advantages-item__img"></figure>
+                            <div class="advantages-item__title">Lorem ipsum dolor</div>
+                            <div class="advantages-item__text text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna.</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- * FAQ -->
+
+                <section class="faq">
+                    <div class="faq__inner _container">
+                        <h2 class="faq__title h1">Вопросы и ответы</h2>
+                        <div class="faq__content">
+                            <div class="faq__column">
+                                <div class="faq-item">
+                                    <div class="faq-item__title h6">Когда лучше лететь из Москвы в Душанбе</div>
+                                    <div class="faq-item__text text">Semper auctor neque vitae tempus quam pellentesque
+                                        nec. Pretium quam vulputate dignissim suspendisse. Fermentum leo vel orci porta.
+                                        Et ultrices neque ornare aenean euismod elementum nisi quis eleifend. Pretium
+                                        nibh ipsum consequat nisl vel pretium lectus quam.</div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-item__title h6">Pretium quam vulputate dignissim?</div>
+                                    <div class="faq-item__text text">Semper auctor neque vitae tempus quam pellentesque
+                                        nec. Pretium quam vulputate dignissim suspendisse. Fermentum leo vel orci porta.
+                                        Et ultrices neque ornare aenean euismod elementum nisi quis eleifend. Pretium
+                                        nibh ipsum consequat nisl vel pretium lectus quam. Semper auctor neque vitae
+                                        tempus quam pellentesque nec. Pretium quam vulputate dignissim suspendisse.
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-item__title h6">Pretium quam vulputate dignissim?</div>
+                                    <div class="faq-item__text text">Semper auctor neque vitae tempus quam pellentesque
+                                        nec. Pretium quam vulputate dignissim suspendisse. Fermentum leo vel orci porta.
+                                        Et ultrices neque ornare aenean euismod elementum nisi quis eleifend. Pretium
+                                        nibh ipsum consequat nisl vel pretium lectus quam. </div>
+                                </div>
+                            </div>
+                            <div class="faq__column">
+                                <div class="faq-item">
+                                    <div class="faq-item__title h6">Pretium quam vulputate dignissim?</div>
+                                    <div class="faq-item__text text">Semper auctor neque vitae tempus quam pellentesque
+                                        nec. Pretium quam vulputate dignissim suspendisse. Fermentum leo vel orci porta.
+                                        Et ultrices neque ornare aenean euismod elementum nisi quis eleifend. Pretium
+                                        nibh ipsum consequat nisl vel pretium lectus quam. Semper auctor neque vitae
+                                        tempus quam pellentesque nec. Pretium quam vulputate dignissim suspendisse.
+                                        Fermentum leo vel orci porta. Et ultrices neque ornare aenean euismod elementum
+                                        nisi quis eleifend. </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-item__title h6">Pretium quam vulputate dignissim?</div>
+                                    <div class="faq-item__text text">Semper auctor neque vitae tempus quam pellentesque
+                                        nec. Pretium quam vulputate dignissim suspendisse. Fermentum leo vel orci porta.
+                                        Et ultrices neque ornare aenean euismod elementum nisi quis eleifend. Pretium
+                                        nibh ipsum consequat nisl vel pretium lectus quam. Semper auctor neque vitae
+                                        tempus quam pellentesque nec. Pretium quam vulputate dignissim suspendisse.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- * AIRLINES -->
+
+                <section class="airlines">
+                    <div class="airlines__inner _container">
+                        <h2 class="airlines__title h1">Вопросы и ответы</h2>
+                        <div class="airlines__content">
+                            <div class="airlines-item">
+                                <div class="airlines-item__name medium-label">Сочи - Екатеринбург</div>
+                                <div class="airlines-item__cost">от 2 400 р</div>
+                            </div>
+                            <div class="airlines-item">
+                                <div class="airlines-item__name medium-label">Сочи - Екатеринбург</div>
+                                <div class="airlines-item__cost">от 2 400 р</div>
+                            </div>
+                            <div class="airlines-item">
+                                <div class="airlines-item__name medium-label">Сочи - Екатеринбург</div>
+                                <div class="airlines-item__cost">от 2 400 р</div>
+                            </div>
+
+                            <div class="airlines-item">
+                                <div class="airlines-item__name medium-label">Москва - Владивосток</div>
+                                <div class="airlines-item__cost">от 2 400 р</div>
+                            </div>
+                            <div class="airlines-item">
+                                <div class="airlines-item__name medium-label">Москва - Владивосток</div>
+                                <div class="airlines-item__cost">от 2 400 р</div>
+                            </div>
+                            <div class="airlines-item">
+                                <div class="airlines-item__name medium-label">Москва - Владивосток</div>
+                                <div class="airlines-item__cost">от 2 400 р</div>
+                            </div>
+
+                            <div class="airlines-item">
+                                <div class="airlines-item__name medium-label">Ростов на Дону - Екатеренбург</div>
+                                <div class="airlines-item__cost">от 2 400 р</div>
+                            </div>
+                            <div class="airlines-item">
+                                <div class="airlines-item__name medium-label">Ростов на Дону - Екатеренбург</div>
+                                <div class="airlines-item__cost">от 2 400 р</div>
+                            </div>
+                            <div class="airlines-item">
+                                <div class="airlines-item__name medium-label">Ростов на Дону - Екатеренбург</div>
+                                <div class="airlines-item__cost">от 2 400 р</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- * FOOTER -->
+        @@include('_footer.html',{})
+    </div>
+
+    <!-- * JS -->
+    @@include('_js.html',{})
 </body>
 
 </html>

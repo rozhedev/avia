@@ -1,0 +1,62 @@
+.news-submenu {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: $divider;
+
+    @media screen and (max-width: $littleTablet + px) {
+        padding: 20px 0;
+        justify-content: flex-end;
+    }
+    .aside__header {
+        display: none;
+
+        @media screen and (max-width: $littleTablet + px) {
+            display: block;
+            margin-right: 32px;
+            border-bottom: none;
+        }
+    }
+    &__list {
+        min-width: 1272px;
+        justify-content: space-between;
+        align-items: center;
+
+        // Ширина контейнера без padding'ов
+        @media screen and (max-width: $bigTablet + px) {
+            min-width: 928px;
+            justify-content: start !important;
+            flex-wrap: wrap;
+        }
+        @media screen and (max-width: $littleTablet + px) {
+            min-width: 696px;
+            flex-wrap: nowrap;
+        }
+        @media screen and (max-width: $foldPhone + px) {
+            min-width: 512px;
+        }
+        @media screen and (max-width: $phone + px) {
+            min-width: 336px;
+        }
+    }
+    &__body {
+        @media screen and (max-width: $littleTablet + px) {
+            top: 160px !important;
+            height: calc(100% - 160px) !important;
+        }
+    }
+    &__link {
+        display: block;
+        margin-top: 20px;
+        &::before {
+            bottom: -21px;
+            background-color: $blue;
+        }
+        @media screen and (max-width: $bigTablet + px) {
+            margin: 20px 20px 0 0;
+        }
+        @media screen and (max-width: $littleTablet + px) {
+            margin: 0;
+        }
+    }
+}

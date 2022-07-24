@@ -1,0 +1,124 @@
+.aside {
+    width: 318px;
+    margin-left: 30px;
+    position: relative;
+
+    &__inner {
+        padding-left: 30px;
+        border-left: $divider;
+
+        @media screen and (max-width: $bigTablet + px) {
+            padding-left: 0;
+            border-left: none;
+        }
+    }
+
+    @media screen and (max-width: $bigTablet + px) {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+        width: 100%;
+        padding-bottom: 20px;
+        border-bottom: $divider;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 28px 0 28px;
+        border-bottom: $divider;
+
+        &-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: $bigTablet + px) {
+            display: none;
+        }
+
+        @media screen and (max-width: $littleTablet + px) {
+            display: block;
+            border-bottom: none;
+            padding: 0;
+
+            &--pos {
+                position: absolute;
+                top: 18px;
+                right: 64px;
+            }
+        }
+    }
+
+    &__menu {
+        margin-top: 15px;
+
+        @media screen and (max-width: $bigTablet + px) {
+            margin-top: 0;
+        }
+        @media screen and (max-width: $littleTablet + px) {
+            padding-top: 20px;
+            display: flex;
+            justify-content: end;
+        }
+
+        // *  Media for aside menu
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+
+            @media screen and (max-width: $bigTablet + px) {
+                width: 100% !important;
+                flex-direction: row;
+                justify-content: start !important;
+                flex-wrap: wrap;
+            }
+        }
+        &-body {
+            @media screen and (max-width: $littleTablet + px) {
+                top: 168px !important;
+                height: calc(100% - 168px) !important;
+                padding: 30px !important;
+            }
+        }
+        &-link {
+            display: inline-block;
+            margin-top: 15px;
+
+            @media screen and (max-width: $bigTablet + px) {
+                margin: 16px 20px 0 0;
+            }
+            @media screen and (max-width: $littleTablet + px) {
+                margin: 0;
+            }
+        }
+    }
+    &__recommends {
+        .aside__header {
+            margin-top: 28px;
+            @media screen and (max-width: $littleTablet + px) {
+                display: none;
+            }
+        }
+    }
+    &__items-cont {
+        margin-top: 30px;
+
+        @media screen and (max-width: $bigTablet + px) {
+            display: none;
+        }
+    }
+}
+
+// * NEWS SUBMENU
+
+.news-submenu {
+    width: 100%;
+
+    &__body {
+        display: flex;
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,31 @@
+.article {
+    padding: 48px 0 184px;
+    width: 932px;
+    padding-bottom: 50px;
+    border-bottom: $divider;
+
+    @media screen and (max-width: $littleTablet + px) {
+        width: 100%;
+    }
+    
+    &-content__cont {
+        max-width: 424px;
+        margin-top: 30px;
+    }
+    &-text__cont {
+        margin-top: 50px;
+    }
+    &__activity-cont2 {
+        margin-top: 30px;
+    }
+}
+
+.comments__cont {
+    max-width: 636px;
+    margin: 50px 0 40px;
+}
+
+.comments-items__cont {
+    max-width: 636px;
+    margin-top: 40px;
+}
