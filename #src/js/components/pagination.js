@@ -57,7 +57,7 @@ function createPagination(totalPages, page) {
             liElem += `<li class="pagination__list-item dots"><span>...</span></li>`;
         }
 
-        liElem += `<li class="pagination__list-item last num" onclick="createPagination(totalPages, ${totalPages})"><span>${totalPages}</span></li>`;
+        liElem += `<li class="pagination__list-item last num" onclick="createPagination(totalPages, ${totalPages})"><span>${totalPages}<span></li>`;
     }
 
     if (page < totalPages) {

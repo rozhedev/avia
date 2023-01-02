@@ -8,12 +8,23 @@
     padding: 10px 36px;
 
     &__inner {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
         padding: 30px 0;
         border-top: $divider;
         border-bottom: $divider;
+
+        &::before {
+            content: "";
+            display: block;
+            transform: translateY(-30px);
+            margin: 0px auto;
+            width: 60px;
+            height: 5px;
+            border-radius: 0px 0px 9px 9px;
+            background-color: $green;
+        }
     }
     &__choose {
         display: flex;
@@ -26,10 +37,12 @@
     .news-categories {
         width: 270px;
     }
-    // &__transplant {
+    // TODO Create all components & transfer to separate files
+
+    // &__transplants {
     // }
     // .select {
     // }
-    // &__company {
+    // &__companies {
     // }
 }

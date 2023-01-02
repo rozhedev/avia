@@ -1,3 +1,8 @@
-@@include('app/components/_readmore.js', {})
-@@include('app/components/_loadmore.js', {})
-@@include('app/components/_pagination.js', {})
+"use strict"
+
+@@include("./components/regular.js", {})
+@@include("./components/preloader.js", {})
+@@include("./components/burger.js", {})
+@@include("./components/readmore.js", {})
+@@include("./components/loadmore.js", {})
+@@include("./components/pagination.js", {})

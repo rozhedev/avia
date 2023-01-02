@@ -1,0 +1,140 @@
+// * SELECT
+
+.select {
+    position: relative;
+    font-size: 1.1rem;
+
+    &__item {
+        position: relative;
+    }
+    &__title {
+        cursor: pointer;
+    }
+    &__value,
+    &__options {
+        font-weight: 600;
+        line-height: 1.6;
+        letter-spacing: 0.02em;
+    }
+    &__value {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+
+        span {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+        &::before {
+            content: "";
+            display: inline-block;
+            margin-left: 4px;
+            width: 24px;
+            height: 24px;
+            // background: url($chevron-icon) center / 100% no-repeat;
+            transition: $transition;
+        }
+    }
+    &__options {
+        display: none;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        background-color: $white; // * Чтобы не был виден текст под select'ом
+    }
+    &__option {
+        padding: 0px 12px;
+        text-align: center;
+        border-top: 1px solid $dark;
+        cursor: pointer;
+    }
+    &._active {
+        z-index: 5;
+
+        & .select__value::before {
+            transform: rotate(-180deg);
+        }
+        & .select__options {
+            display: block;
+        }
+    }
+}
+
+.select_form-select {
+    width: 304px;
+    height: 56px;
+    padding: 10px 16px;
+    border: 3px solid $blue;
+    border-radius: 8px;
+
+    .select__options {
+        margin-top: 6px;
+        margin-left: -19px;
+        opacity: 0;
+        transition: $transition;
+    }
+    .select__option {
+        width: 298px;
+        padding: 4px 16px;
+        text-align: left;
+        border-top: none;
+    }
+    &._active {
+        border-radius: 8px 8px 0 0;
+        border-top: 3px solid $blue;
+        border-left: 3px solid $blue;
+        border-right: 3px solid $blue;
+        border-bottom: none;
+
+        .select__options {
+            opacity: 1;
+            border-radius: 0 0 8px 8px;
+            border-left: 3px solid $blue;
+            border-right: 3px solid $blue;
+            border-bottom: 3px solid $blue;
+            border-top: none;
+        }
+    }
+}
+
+
+// .select {
+//     display: block;
+//     font-size: 16px;
+//     padding: 8px 8px 8px 20px;
+//     margin: 0;
+//     border-radius: 21px;
+//     border: $divider;
+//     -moz-appearance: none;
+//     -webkit-appearance: none;
+//     appearance: none;
+//     background-image: url("../img/icons/nav/dropdown.svg");
+//     background-repeat: no-repeat, repeat;
+//     background-position: right 0.7em top 50%, 0 0;
+//     background-size: 1.2em;
+// }
+// .select-css::-ms-expand {
+//     display: none;
+// }
+// .select-css:hover {
+//     border-color: #888;
+// }
+// .select-css:focus {
+//     border-color: #aaa;
+//     box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+//     box-shadow: 0 0 0 3px -moz-mac-focusring;
+//     color: #222;
+//     outline: none;
+// }
+// .select-css option {
+//     font-weight: normal;
+// }
+// *[dir="rtl"] .select-css,
+// :root:lang(ar) .select-css,
+// :root:lang(iw) .select-css {
+//     background-position: left 0.7em top 50%, 0 0;
+//     padding: 0.6em 0.8em 0.5em 1.4em;
+// }

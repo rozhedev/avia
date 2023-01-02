@@ -1,27 +1,18 @@
 @use "sass:math";
 
-//<VARIABLES>=======================================
 @import "base/vars.scss";
-
-//<MIXINS>==========================================
 @import "base/mixins.scss";
-
-//<FONTS>===========================================
-//&display=swap&subset=cyrillic-ext
 @import "base/fonts.scss";
-
-//<NULLSTYLE & COMMON STYLES>=======================
 @import "base/null.scss";
 @import "base/common.scss";
-
-//<GRID & CONTAINER>================================
 @import "base/grid.scss";
-
-//<UI & DONE CLASSES>===============================
 @import "base/ui.scss";
 
-//<FORMS & COMPONENTS>==============================
+//<TEMPLATES>=======================================
+@import "templates/header.scss";
+@import "templates/footer.scss";
 
+//<FORMS & COMPONENTS>==============================
 // <.STATIC>
 @import "components/static/profile.scss";
 @import "components/static/activity.scss";
@@ -39,21 +30,17 @@
 @import "components/static/advantages-item.scss";
 
 // <.DYNAMIC>
+@import "components/dynamic/preloader.scss";
+@import "components/dynamic/scrollbar.scss";
+
 @import "components/dynamic/form.scss";
 @import "components/dynamic/news-submenu.scss";
 @import "components/dynamic/news-categories.scss";
 @import "components/dynamic/pagination.scss";
-
-// Other connections situated on docs/readme.txt
-
-//<TEMPLATES>=======================================
-@import "templates/header.scss";
-@import "templates/footer.scss";
-
-// <HOME>===========================================
-@import "main/home.scss";
-@import "main/search-table.scss";
+@import "components/dynamic/select.scss";
+@import "components/dynamic/search-table.scss";
 
 //<PAGES>===========================================
+@import "pages/home.scss";
 @import "pages/news.scss";
 @import "pages/typical.scss";
