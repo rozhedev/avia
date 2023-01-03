@@ -1384,13 +1384,22 @@ html::-webkit-scrollbar-thumb {
 .news-submenu {
   display: flex;
   align-items: center;
-  padding-bottom: 20px;
+  padding: 20px 0px;
   border-bottom: 1px solid rgba(22, 28, 37, 0.1);
+}
+@media screen and (max-width: 1279.98px) {
+  .news-submenu__list li:not(:last-of-type) {
+    margin-right: 30px;
+    line-height: 2.5;
+  }
 }
 @media screen and (max-width: 959.98px) {
   .news-submenu {
-    padding: 20px 0;
     justify-content: flex-end;
+  }
+  .news-submenu__list li:not(:last-of-type) {
+    margin-right: 0px;
+    line-height: initial;
   }
 }
 .news-submenu .aside__header {

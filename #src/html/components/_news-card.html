@@ -1,0 +1,59 @@
+<div class="news-card">
+    <figure class="news-card__img">
+        <img src="@@imgPath" alt="@@alt">
+    </figure>
+
+    <div class="news-card__little-inner">
+        <div class="news-card__label">
+            <span class="aside-item__author label">@@authorName</span>
+            <span class="aside-item__date label">@@publishedDate</span>
+        </div>
+        <h6 class="news-card__subtitle">@@littleCardTitle</h6>
+
+        <!-- * Activity -->
+        @@include('_post-activity.html', {
+        "applauseIconPath": "img/icons/activity/applause.svg",
+        "applauseIconAlt": "applause",
+        "applauseCount": "34",
+        "shareIconPath": "img/icons/activity/share.svg",
+        "shareIconAlt": "share",
+        "shareCount": "12",
+        "commentIconPath": "img/icons/activity/comment.svg",
+        "commentIconAlt": "comment",
+        "commentCount": "4",
+        "viewIconPath": "img/icons/activity/view.svg",
+        "viewIconAlt": "view",
+        "viewCount": "56",
+        })
+    </div>
+
+    <div class="news-card__big-inner">
+        <h2 class="news-card__title h2">@@bigCardTitle</h2>
+        <p class="news-card__text text">@@bigCardContent</p>
+
+        <div class="news-card__info">
+            <!-- * Profile -->
+            @@include('_post-profile.html',{
+            "imgPath": "img/photos/profile.jpg",
+            "alt": "profile photo",
+            "authorName": "Андрей Иванов",
+            "publishedDate": "17.07.2021"
+            })
+            <!-- * Activity -->
+            @@include('_post-activity.html', {
+            "applauseIconPath": "img/icons/activity/applause.svg",
+            "applauseIconAlt": "applause",
+            "applauseCount": "34",
+            "shareIconPath": "img/icons/activity/share.svg",
+            "shareIconAlt": "share",
+            "shareCount": "12",
+            "commentIconPath": "img/icons/activity/comment.svg",
+            "commentIconAlt": "comment",
+            "commentCount": "4",
+            "viewIconPath": "img/icons/activity/view.svg",
+            "viewIconAlt": "view",
+            "viewCount": "56",
+            })
+        </div>
+    </div>
+</div>

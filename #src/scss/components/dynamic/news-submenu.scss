@@ -1,12 +1,25 @@
 .news-submenu {
     display: flex;
     align-items: center;
-    padding-bottom: 20px;
+    padding: 20px 0px;
     border-bottom: $divider;
 
+    @media screen and (max-width: $bigTablet + px) {
+        &__list {
+            li:not(:last-of-type) {
+                margin-right: 30px;
+                line-height: 2.5;
+            }
+        }
+    }
     @media screen and (max-width: $littleTablet + px) {
-        padding: 20px 0;
         justify-content: flex-end;
+        &__list {
+            li:not(:last-of-type) {
+                margin-right: 0px;
+                line-height: initial;
+            }
+        }
     }
     .aside__header {
         display: none;
@@ -22,7 +35,7 @@
         justify-content: space-between;
         align-items: center;
 
-        // Ширина контейнера без padding'ов
+        // * Ширина контейнера без padding'ов
         @media screen and (max-width: $bigTablet + px) {
             min-width: 928px;
             justify-content: start !important;

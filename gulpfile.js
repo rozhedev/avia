@@ -301,7 +301,7 @@ let buildDev = gulp.series(clean, gulp.parallel(fontsBuild, copyFolders, json, h
 let watch = gulp.series(buildDev, gulp.parallel(watchFiles, browserSync));
 let build = gulp.parallel(htmlBuild, cssBuild, jsBuild, imagesBuild);
 
-exports.copy = copyFolders;
+exports.copy = copyFolders; 
 exports.fonts = fontsBuild;
 exports.build = build;
 exports.watch = watch;
