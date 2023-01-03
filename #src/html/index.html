@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title":"Авиабилеты"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('components/_preloader.html',{})
+
+        <!-- * HEADER -->
+        @@include('components/_header.html',{})
+
+        <div class="page">
+            <main class="main">
+                <section class="home">
+                    <div class="home__inner _container">
+                        <div class="home__titles">
+                            <div class="home__suptitle">Билет на самолёт</div>
+                            <h1 class="home__title h1">Из Новосибирска в Санкт-Петербург</h1>
+                        </div>
+
+                        <!-- * SEARCH TABLE -->
+
+                        <div class="search-table">
+                            <div class="search-table__inner">
+                                <div class="search-table__choose">
+                                    <nav class="news-categories search-table__choose-item">
+                                        <button class="news-categories__item">В одну сторону</button>
+                                        <button class="news-categories__item _active">Туда и обратно</button>
+                                    </nav>
+                                    <div class="select-container">
+                                        <form action="" method="get">
+                                            <select aria-label="transplants" name="transplants" id="transplants" class="inp select search-table__choose-item">
+                                                <option value="transplant1">Пересадка 1</option>
+                                                <option value="transplant2">Пересадка 2</option>
+                                                <option value="transplant3">Пересадки 3</option>
+                                            </select>
+                                        </form>
+                                    </div>
+
+                                    <div class="select-container">
+                                        <form action="" method="get">
+                                            <select aria-label="companies" name="companies" id="companies" class="inp select search-table__choose-item">
+                                                <option value="company1">Авиакомпания 1</option>
+                                                <option value="company2">Авиакомпания 2</option>
+                                                <option value="company3">Авиакомпания 3</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="search-table__params">
+                                    <input type="text" name="from-inp" id="from-inp" class="inp search-table__params-inp" placeholder="Откуда едим">
+                                    <button class="search-table__params-btn">
+                                        <img src="img/icons/main/arrows.svg" alt="arrows">
+                                    </button>
+                                    <input type="text" name="to-inp" id="to-inp" class="inp search-table__params-inp" placeholder="Куда едим">
+
+                                    <div class="select-container">
+                                        <form action="" method="get">
+                                            <select aria-label="person-count" name="person-count" id="person-count" class="inp select search-table__choose-item">
+                                                <option value="" selected>1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- * ADVANTAGES -->
+
+                <section class="advantages">
+                    <div class="advantages__inner _container">
+                        @@loop("components/_advantages-item.html", "../json/advantages-item.json")
+                    </div>
+                </section>
+
+                <!-- * FAQ -->
+
+                <section class="faq">
+                    <div class="faq__inner _container">
+                        <h2 class="faq__title h1">Вопросы и ответы</h2>
+                        <div class="faq__content">
+                            @@loop("components/_main-faq-item.html", "../json/main-faq.json")
+                        </div>
+                </section>
+
+                <!-- * AIRLINES -->
+
+                <section class="airlines">
+                    <div class="airlines__inner _container">
+                        <h2 class="airlines__title h1">Популярные авианаправления</h2>
+                        <div class="airlines__content">
+                            @@loop("components/_airlines-item.html", "../json/airlines-item.json")
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- * FOOTER -->
+        @@include('components/_footer.html',{})
+    </div>
+
+    <!-- * JS -->
+    @@include('_js.html',{})
+</body>
+
+</html>

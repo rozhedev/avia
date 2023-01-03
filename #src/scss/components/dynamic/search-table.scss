@@ -37,7 +37,13 @@
     .news-categories {
         width: 270px;
     }
-    // TODO Create all components & transfer to separate files
+    &__params {
+        display: flex;
+
+        .select {
+            padding: 1rem 1.25rem;
+        }
+    }
 
     // &__transplants {
     // }

@@ -43,14 +43,20 @@
 .faq {
     margin-top: 217px;
     &__content {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        grid-auto-flow: 1fr / repeat(2, 1fr);
         margin-top: 35px;
     }
 }
 
 .faq-item {
     width: 625px;
+    margin-bottom: 30px;
+    
+    &:nth-of-type(2n + 1) {
+        margin-right: 30px;
+    }
     &__text {
         margin-top: 14px;
     }
