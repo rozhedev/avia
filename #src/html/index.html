@@ -25,10 +25,14 @@
                         <div class="search-table">
                             <div class="search-table__inner">
                                 <div class="search-table__choose">
-                                    <nav class="news-categories search-table__choose-item">
-                                        <button class="news-categories__item">В одну сторону</button>
-                                        <button class="news-categories__item _active">Туда и обратно</button>
-                                    </nav>
+                                    @@include('components/_news-categories.html', {
+                                        "isActive1": "",
+                                        "label1": "В одну сторону",
+                                        "isActive2": "_active",
+                                        "label2": "Туда и обратно",
+                                        "isActive3": "_hide",
+                                        "label3": ""
+                                    })
                                     <div class="select-container">
                                         <form action="" method="get">
                                             <select aria-label="transplants" name="transplants" id="transplants" class="inp select search-table__choose-item">

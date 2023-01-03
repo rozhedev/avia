@@ -1,0 +1,32 @@
+<div class="article-text__cont">
+    <h2 class="h3" id="#">H3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+    <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque facilisi
+        consequat venenatis dolor at. Semper convallis amet scelerisque sit eu platea eu. Ut
+        vestibulum ut aliquam eget. Elit montes, nec purus nibh sed sit. In tortor nullam cursus
+        nibh odio nunc odio.
+    </p>
+    <p class="text">
+        Accumsan porttitor pellentesque dolor egestas tortor amet purus. Semper purus tellus egestas
+        tortor nec vestibulum orci. Ullamcorper turpis at volutpat ipsum. Nunc, et, ornare mi, arcu
+        ultrices sed ultricies urna. Cras hac in viverra posuere. Sit sed condimentum id non,
+        aliquet non aliquam dolor semper.
+    </p>
+    <p class="text">
+        Aliquam pellentesque lorem vestibulum ridiculus amet vulputate in.
+    </p>
+    @@if(hasOrderedList == "true") {
+    @@include('_ordered-list.html', {
+        "ol_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque facilisi consequat venenatis dolor at. Semper  convallis amet scelerisque sit eu platea eu. Ut vestibulum ut aliquam eget. Elit montes, nec purus nibh sed sit.",
+        "ol_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque facilisi consequat venenatis dolor at. Semper  convallis amet scelerisque sit eu platea eu. Ut vestibulum ut aliquam eget.",
+        "ol_3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque facilisi consequat venenatis dolor at. Semper  convallis amet scelerisque sit."
+    })
+    }
+    @@if(hasUnorderedList == "true") {
+    @@include('_unordered-list.html', {
+        "ul_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque facilisi consequat venenatis dolor at. Semper  convallis amet scelerisque sit eu platea eu. Ut vestibulum ut aliquam eget. Elit montes, nec purus nibh sed sit.",
+        "ul_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque facilisi consequat venenatis dolor at.Semper   convallis amet scelerisque sit eu platea eu. Ut vestibulum ut aliquam eget.",
+        "ul_3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque facilisi consequat venenatis dolor at.Semper   convallis amet scelerisque sit."
+    })
+    }
+</div>

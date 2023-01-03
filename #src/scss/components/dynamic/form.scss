@@ -20,14 +20,10 @@
             color: $darkGrey;
             margin: 0 0 4px 20px;
         }
-        &-inp {
-            border: 1px solid $blue;
-        }
         &-error {
             margin: 6px 0 0 20px;
             color: $red;
             display: none;
-
             img {
                 margin-right: 6px;
             }
@@ -64,9 +60,6 @@
             padding-left: 30px;
             margin-bottom: 50px;
 
-            .comments__form-inp {
-                border-color: $lightGrey;
-            }
             .comments__form-control:nth-child(2) {
                 display: none;
             }

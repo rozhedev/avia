@@ -1,54 +1,54 @@
 .h1 {
-    font-family: "SFProDisplay";
+    font-family: 'SFProDisplay';
     font-weight: 700;
     font-size: 30px;
     line-height: 1.2;
 }
 
 .h2 {
-    font-family: "SFProDisplay";
+    font-family: 'SFProDisplay';
     font-weight: 600;
     font-size: 28px;
     line-height: 1.4;
 }
 
 .h3 {
-    font-family: "SFProDisplay";
+    font-family: 'SFProDisplay';
     font-weight: 600;
     font-size: 26px;
     line-height: 1.4;
 }
 
 .h4 {
-    font-family: "SFProDisplay";
+    font-family: 'SFProDisplay';
     font-weight: 600;
     font-size: 24px;
     line-height: 1.4;
 }
 
 .h5 {
-    font-family: "SFProDisplay";
+    font-family: 'SFProDisplay';
     font-weight: 600;
     font-size: 22px;
     line-height: 1.4;
 }
 
 .h6 {
-    font-family: "SFProDisplay";
+    font-family: 'SFProDisplay';
     font-weight: 600;
     font-size: 20px;
     line-height: 1.4;
 }
 
 .subtitle {
-    font-family: "SFProDisplay";
+    font-family: 'SFProDisplay';
     font-weight: 500;
     font-size: 16px;
     line-height: 1.4;
 }
 
 .text {
-    font-family: "SFProDisplay";
+    font-family: 'SFProDisplay';
     font-weight: 300;
     font-size: 16px;
     line-height: 1.4;
@@ -56,7 +56,7 @@
 }
 
 .navlink {
-    font-family: "SFProDisplay";
+    font-family: 'SFProDisplay';
     font-weight: 400;
     font-size: 16px;
     line-height: 1.2;
@@ -64,7 +64,7 @@
     position: relative;
 
     &::before {
-        content: "";
+        content: '';
         display: block;
         opacity: 0;
         width: 100%;
@@ -112,7 +112,7 @@
     text-align: center;
     color: $white;
     transition: $transition;
-    font-family: "SFProDisplay";
+    font-family: 'SFProDisplay';
 
     &:hover {
         background-color: darken($blue, 5%);
@@ -126,7 +126,11 @@
     padding: 15px 20px;
     border-radius: 52px;
     border: 1px solid $lightGrey;
-    font-family: "SFProDisplay";
+    font-family: 'SFProDisplay';
+    transition: $transition;
+    &:focus {
+        border: 1px solid $blue;
+    }
 }
 
 .textarea {
@@ -135,5 +139,41 @@
     border-radius: 25px;
     border: 1px solid $lightGrey;
     resize: none;
-    font-family: "SFProDisplay";
+    font-family: 'SFProDisplay';
+}
+
+// * UN- ORDERED LIST
+
+.ordered-list {
+    counter-reset: myCounter;
+
+    &__item {
+        list-style: none;
+        margin: 0 0 0 1rem;
+
+        &::before {
+            counter-increment: myCounter;
+            content: counter(myCounter);
+            color: $dark;
+            display: inline;
+            line-height: 24px;
+            font-weight: bold;
+            margin: 0 0.8rem 0 0;
+        }
+    }
+}
+
+.unordered-list {
+    &__item {
+        margin: 0 0 0 1rem;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background-color: $blue;
+            margin: 0 0.8rem 0.2rem 0;
+        }
+    }
 }

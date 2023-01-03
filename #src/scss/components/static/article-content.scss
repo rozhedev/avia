@@ -52,36 +52,3 @@
         }
     }
 }
-
-// * ARTICLE TEXT
-
-.ordered-list {
-    counter-reset: myCounter;
-
-    &__item {
-        list-style: none;
-        margin: 0 0 0 14px;
-
-        &::before {
-            counter-increment: myCounter;
-            content: counter(myCounter);
-            color: $dark;
-            display: inline;
-            line-height: 24px;
-            font-weight: bold;
-            margin: 0 9px 0 0;
-        }
-    }
-}
-
-.unordered-list {
-    &__item::before {
-        content: "";
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-        border-radius: 999px;
-        background-color: $blue;
-        margin: 0 14px 2px 0;
-    }
-}

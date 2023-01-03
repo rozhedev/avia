@@ -3,7 +3,6 @@
     background-color: $lightGrey;
     border-radius: 999px;
     margin-bottom: 40px;
-    padding: 0 0.25rem;
 
     &__item {
         font-family: "SFProDisplay";
@@ -11,8 +10,7 @@
         font-size: 14px;
         line-height: 1.2;
         font-weight: 500;
-
-        padding: 0rem 1rem;
+        padding: 0rem 1.2rem;
 
         &:hover {
             color: $blue;
@@ -22,6 +20,9 @@
             padding: 0.66rem 1rem;
             color: $white;
             border-radius: 999px;
+        }
+        &._hide {
+            display: none;
         }
     }
 }

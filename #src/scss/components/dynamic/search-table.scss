@@ -8,9 +8,6 @@
     padding: 10px 36px;
 
     &__inner {
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
         padding: 30px 0;
         border-top: $divider;
         border-bottom: $divider;
@@ -29,13 +26,9 @@
     &__choose {
         display: flex;
         align-items: flex-start;
-
-        &-item {
-            margin-left: 14px;
+        & > * {
+            margin-right: 14px;
         }
-    }
-    .news-categories {
-        width: 270px;
     }
     &__params {
         display: flex;

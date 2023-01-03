@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('_head.html',{
-"title":"Авиабилеты"
+"title":"Типичная статья"
 })
 
 <body>
@@ -21,40 +21,31 @@
                             <div class="banner__profile-cont">
 
                                 <!-- * Profile -->
-
-                                <div class="profile">
-                                    <img src="img/photos/profile.jpg" alt="profile photo" class="profile__img">
-                                    <div class="profile__info">
-                                        <div class="profile__name medium-label">Андрей Иванов</div>
-                                        <div class="profile__date label">17.07.2021</div>
-                                    </div>
-                                </div>
+                                @@include('components/_post-profile.html',{
+                                "imgPath": "img/photos/profile.jpg",
+                                "alt": "profile photo",
+                                "authorName": "Андрей Иванов",
+                                "publishedDate": "17.07.2021"
+                                })
                             </div>
 
                             <div class="banner__activity-cont">
 
                                 <!-- * Activity -->
-
-                                <div class="activity">
-                                    <div class="activity__item">
-                                        <img src="img/icons/activity/applause.svg" alt="applause"
-                                            class="activity__item-img">
-                                        <div class="activity__item-num medium-label">34</div>
-                                    </div>
-                                    <div class="activity__item">
-                                        <img src="img/icons/activity/share.svg" alt="share" class="activity__item-img">
-                                        <div class="activity__item-num medium-label">12</div>
-                                    </div>
-                                    <div class="activity__item">
-                                        <img src="img/icons/activity/comment.svg" alt="comment"
-                                            class="activity__item-img">
-                                        <div class="activity__item-num medium-label">4</div>
-                                    </div>
-                                    <div class="activity__item">
-                                        <img src="img/icons/activity/view.svg" alt="view" class="activity__item-img">
-                                        <div class="activity__item-num medium-label">56</div>
-                                    </div>
-                                </div>
+                                @@include('components/_post-activity.html', {
+                                "applauseIconPath": "img/icons/activity/applause.svg",
+                                "applauseIconAlt": "applause",
+                                "applauseCount": "34",
+                                "shareIconPath": "img/icons/activity/share.svg",
+                                "shareIconAlt": "share",
+                                "shareCount": "12",
+                                "commentIconPath": "img/icons/activity/comment.svg",
+                                "commentIconAlt": "comment",
+                                "commentCount": "4",
+                                "viewIconPath": "img/icons/activity/view.svg",
+                                "viewIconAlt": "view",
+                                "viewCount": "56",
+                                })
                             </div>
                         </div>
 
@@ -70,256 +61,29 @@
                         <div class="article-content">
                             <h1 class="h1">Содержание</h1>
                             <div class="article-content__inner">
-
-                                <div class="article-content__item">
-                                    <div class="article-content__item-icon">
-                                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.83376 6.22063L1.29814 11.5061C1.07728 11.7202 0.720147 11.7202 0.499286 11.5061L0.165646 11.1825C-0.0552152 10.9684 -0.0552152 10.6221 0.165646 10.408L4.97289 5.83333L0.170345 1.25871C-0.050516 1.04456 -0.050516 0.698269 0.170345 0.484118L0.503986 0.160613C0.724846 -0.0535377 1.08198 -0.0535377 1.30284 0.160613L6.83846 5.44604C7.05462 5.66019 7.05462 6.00648 6.83376 6.22063Z"
-                                                fill="#A7B0BC" />
-                                        </svg>
-                                    </div>
-                                    <h2 class="article-content__item-text">
-                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-                                    </h2>
-                                </div>
-
-                                <div class="article-content__item">
-                                    <div class="article-content__item-icon">
-                                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.83376 6.22063L1.29814 11.5061C1.07728 11.7202 0.720147 11.7202 0.499286 11.5061L0.165646 11.1825C-0.0552152 10.9684 -0.0552152 10.6221 0.165646 10.408L4.97289 5.83333L0.170345 1.25871C-0.050516 1.04456 -0.050516 0.698269 0.170345 0.484118L0.503986 0.160613C0.724846 -0.0535377 1.08198 -0.0535377 1.30284 0.160613L6.83846 5.44604C7.05462 5.66019 7.05462 6.00648 6.83376 6.22063Z"
-                                                fill="#A7B0BC" />
-                                        </svg>
-                                    </div>
-                                    <h2 class="article-content__item-text">
-                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-                                    </h2>
-                                </div>
-
-                                <div class="article-content__item">
-                                    <div class="article-content__item-icon">
-                                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.83376 6.22063L1.29814 11.5061C1.07728 11.7202 0.720147 11.7202 0.499286 11.5061L0.165646 11.1825C-0.0552152 10.9684 -0.0552152 10.6221 0.165646 10.408L4.97289 5.83333L0.170345 1.25871C-0.050516 1.04456 -0.050516 0.698269 0.170345 0.484118L0.503986 0.160613C0.724846 -0.0535377 1.08198 -0.0535377 1.30284 0.160613L6.83846 5.44604C7.05462 5.66019 7.05462 6.00648 6.83376 6.22063Z"
-                                                fill="#A7B0BC" />
-                                        </svg>
-                                    </div>
-                                    <h2 class="article-content__item-text">
-                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-                                    </h2>
-                                </div>
-
-                                <div class="article-content__item">
-                                    <div class="article-content__item-icon">
-                                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.83376 6.22063L1.29814 11.5061C1.07728 11.7202 0.720147 11.7202 0.499286 11.5061L0.165646 11.1825C-0.0552152 10.9684 -0.0552152 10.6221 0.165646 10.408L4.97289 5.83333L0.170345 1.25871C-0.050516 1.04456 -0.050516 0.698269 0.170345 0.484118L0.503986 0.160613C0.724846 -0.0535377 1.08198 -0.0535377 1.30284 0.160613L6.83846 5.44604C7.05462 5.66019 7.05462 6.00648 6.83376 6.22063Z"
-                                                fill="#A7B0BC" />
-                                        </svg>
-                                    </div>
-                                    <h2 class="article-content__item-text">
-                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-                                    </h2>
-                                </div>
-
-                                <div class="article-content__item">
-                                    <div class="article-content__item-icon">
-                                        <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6.83376 6.22063L1.29814 11.5061C1.07728 11.7202 0.720147 11.7202 0.499286 11.5061L0.165646 11.1825C-0.0552152 10.9684 -0.0552152 10.6221 0.165646 10.408L4.97289 5.83333L0.170345 1.25871C-0.050516 1.04456 -0.050516 0.698269 0.170345 0.484118L0.503986 0.160613C0.724846 -0.0535377 1.08198 -0.0535377 1.30284 0.160613L6.83846 5.44604C7.05462 5.66019 7.05462 6.00648 6.83376 6.22063Z"
-                                                fill="#A7B0BC" />
-                                        </svg>
-                                    </div>
-                                    <h2 class="article-content__item-text">
-                                        <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-                                    </h2>
-                                </div>
+                                @@loop("components/_article-content-item.html", "../json/articles/content-item.json")
                             </div>
                         </div>
                     </div>
 
                     <!-- * TYPICAL ARTICLE -->
-                    <div class="article-text__cont">
-                        <h2 class="h2" id="">H2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
-                        <p class="text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque facilisi
-                            consequat venenatis dolor at. Semper convallis amet scelerisque sit eu platea eu. Ut
-                            vestibulum ut aliquam eget. Elit montes, nec purus nibh sed sit. In tortor nullam cursus
-                            nibh odio nunc odio.
-                        </p>
-                        <p class="text">
-                            Accumsan porttitor pellentesque dolor egestas tortor amet purus. Semper purus tellus egestas
-                            tortor nec vestibulum orci. Ullamcorper turpis at volutpat ipsum. Nunc, et, ornare mi, arcu
-                            ultrices sed ultricies urna. Cras hac in viverra posuere. Sit sed condimentum id non,
-                            aliquet non aliquam dolor semper.
-                        </p>
-                        <p class="text">
-                            Aliquam pellentesque lorem vestibulum ridiculus amet vulputate in.
-                        </p>
-
-                        <ol class="ordered-list">
-                            <li class="ordered-list__item text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque
-                                facilisi
-                                consequat venenatis dolor at. Semper convallis amet scelerisque sit eu platea eu. Ut
-                                vestibulum ut aliquam eget. Elit montes, nec purus nibh sed sit.
-                            </li>
-                            <li class="ordered-list__item text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque
-                                facilisi
-                                consequat venenatis dolor at. Semper convallis amet scelerisque sit eu platea eu. Ut
-                                vestibulum ut aliquam eget.
-                            </li>
-                            <li class="ordered-list__item text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque
-                                facilisi
-                                consequat venenatis dolor at. Semper convallis amet scelerisque sit.
-                            </li>
-                        </ol>
-
-                        <p class="article__text text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque facilisi
-                            consequat venenatis dolor at. Semper convallis amet scelerisque sit eu platea eu. Ut
-                            vestibulum ut aliquam eget. Elit montes, nec purus nibh sed sit. In tortor nullam cursus
-                            nibh odio nunc odio.
-                        </p>
-                        <p class="article__text text">
-                            Accumsan porttitor pellentesque dolor egestas tortor amet purus. Semper purus tellus
-                            egestas
-                            tortor nec vestibulum orci. Ullamcorper turpis at volutpat ipsum. Nunc, et, ornare mi,
-                            arcu
-                            ultrices sed ultricies urna. Cras hac in viverra posuere. Sit sed condimentum id non,
-                            aliquet non aliquam dolor semper.
-                        </p>
-                        <p class="article__text text">
-                            Aliquam pellentesque lorem vestibulum ridiculus amet vulputate in.
-                        </p>
-
-                        <ul class="unordered-list">
-                            <li class="unordered-list__item text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque
-                                facilisi
-                                consequat venenatis dolor at. Semper convallis amet scelerisque sit eu platea eu. Ut
-                                vestibulum ut aliquam eget. Elit montes, nec purus nibh sed sit.
-                            </li>
-                            <li class="unordered-list__item text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque
-                                facilisi
-                                consequat venenatis dolor at. Semper convallis amet scelerisque sit eu platea eu. Ut
-                                vestibulum ut aliquam eget.
-                            </li>
-                            <li class="unordered-list__item text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque
-                                facilisi
-                                consequat venenatis dolor at. Semper convallis amet scelerisque sit.
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="article-text__cont">
-                        <h2 class="h3" id="#">H3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
-                        <p class="text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque facilisi
-                            consequat venenatis dolor at. Semper convallis amet scelerisque sit eu platea eu. Ut
-                            vestibulum ut aliquam eget. Elit montes, nec purus nibh sed sit. In tortor nullam cursus
-                            nibh odio nunc odio.
-                        </p>
-                        <p class="text">
-                            Accumsan porttitor pellentesque dolor egestas tortor amet purus. Semper purus tellus egestas
-                            tortor nec vestibulum orci. Ullamcorper turpis at volutpat ipsum. Nunc, et, ornare mi, arcu
-                            ultrices sed ultricies urna. Cras hac in viverra posuere. Sit sed condimentum id non,
-                            aliquet non aliquam dolor semper.
-                        </p>
-                        <p class="text">
-                            Aliquam pellentesque lorem vestibulum ridiculus amet vulputate in.
-                        </p>
-                    </div>
-
-                    <div class="article-text__cont">
-                        <h2 class="h4" id="#">H4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
-                        <p class="text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque facilisi
-                            consequat venenatis dolor at. Semper convallis amet scelerisque sit eu platea eu. Ut
-                            vestibulum ut aliquam eget. Elit montes, nec purus nibh sed sit. In tortor nullam cursus
-                            nibh odio nunc odio.
-                        </p>
-                        <p class="text">
-                            Accumsan porttitor pellentesque dolor egestas tortor amet purus. Semper purus tellus egestas
-                            tortor nec vestibulum orci. Ullamcorper turpis at volutpat ipsum. Nunc, et, ornare mi, arcu
-                            ultrices sed ultricies urna. Cras hac in viverra posuere. Sit sed condimentum id non,
-                            aliquet non aliquam dolor semper.
-                        </p>
-                        <p class="text">
-                            Aliquam pellentesque lorem vestibulum ridiculus amet vulputate in.
-                        </p>
-                    </div>
-
-                    <div class="article-text__cont">
-                        <h2 class="h5" id="#">H5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
-                        <p class="text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque facilisi
-                            consequat venenatis dolor at. Semper convallis amet scelerisque sit eu platea eu. Ut
-                            vestibulum ut aliquam eget. Elit montes, nec purus nibh sed sit. In tortor nullam cursus
-                            nibh odio nunc odio.
-                        </p>
-                        <p class="text">
-                            Accumsan porttitor pellentesque dolor egestas tortor amet purus. Semper purus tellus egestas
-                            tortor nec vestibulum orci. Ullamcorper turpis at volutpat ipsum. Nunc, et, ornare mi, arcu
-                            ultrices sed ultricies urna. Cras hac in viverra posuere. Sit sed condimentum id non,
-                            aliquet non aliquam dolor semper.
-                        </p>
-                        <p class="text">
-                            Aliquam pellentesque lorem vestibulum ridiculus amet vulputate in.
-                        </p>
-                    </div>
-
-                    <div class="article-text__cont">
-                        <h2 class="h6" id="#">H6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
-                        <p class="text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi turpis pellentesque facilisi
-                            consequat venenatis dolor at. Semper convallis amet scelerisque sit eu platea eu. Ut
-                            vestibulum ut aliquam eget. Elit montes, nec purus nibh sed sit. In tortor nullam cursus
-                            nibh odio nunc odio.
-                        </p>
-                        <p class="text">
-                            Accumsan porttitor pellentesque dolor egestas tortor amet purus. Semper purus tellus egestas
-                            tortor nec vestibulum orci. Ullamcorper turpis at volutpat ipsum. Nunc, et, ornare mi, arcu
-                            ultrices sed ultricies urna. Cras hac in viverra posuere. Sit sed condimentum id non,
-                            aliquet non aliquam dolor semper.
-                        </p>
-                        <p class="text">
-                            Aliquam pellentesque lorem vestibulum ridiculus amet vulputate in.
-                        </p>
-                    </div>
+                    @@loop("components/_article-text-item.html", "../json/articles/text-item.json")
 
                     <!-- * Activity -->
-
-                    <div class="article__activity-cont2">
-                        <div class="activity">
-                            <div class="activity__item">
-                                <img src="img/icons/activity/applause.svg" alt="applause" class="activity__item-img">
-                                <div class="activity__item-num medium-label">34</div>
-                            </div>
-                            <div class="activity__item">
-                                <img src="img/icons/activity/share.svg" alt="share" class="activity__item-img">
-                                <div class="activity__item-num medium-label">12</div>
-                            </div>
-                            <div class="activity__item">
-                                <img src="img/icons/activity/comment.svg" alt="comment" class="activity__item-img">
-                                <div class="activity__item-num medium-label">4</div>
-                            </div>
-                            <div class="activity__item">
-                                <img src="img/icons/activity/view.svg" alt="view" class="activity__item-img">
-                                <div class="activity__item-num medium-label">56</div>
-                            </div>
-                        </div>
-                    </div>
+                    @@include('components/_post-activity.html', {
+                    "applauseIconPath": "img/icons/activity/applause.svg",
+                    "applauseIconAlt": "applause",
+                    "applauseCount": "34",
+                    "shareIconPath": "img/icons/activity/share.svg",
+                    "shareIconAlt": "share",
+                    "shareCount": "12",
+                    "commentIconPath": "img/icons/activity/comment.svg",
+                    "commentIconAlt": "comment",
+                    "commentCount": "4",
+                    "viewIconPath": "img/icons/activity/view.svg",
+                    "viewIconAlt": "view",
+                    "viewCount": "56",
+                    })
                 </section>
 
                 <!-- * COMMENTS -->
@@ -329,33 +93,15 @@
                         <h2 class="h1">Коментарии</h2>
 
                         <!-- * Comments form -->
-
                         <form action="#" class="comments__form">
-                            <div class="comments__form-control">
-                                <label for="username" class="comments__form-label">Имя</label>
-                                <input type="text" name="username" id="username" class="comments__form-inp inp"
-                                    placeholder="Ваше имя">
-                                <small class="comments__form-error">
-                                    <img src="img/icons/error-circle.svg" alt="error">
-                                    Error message
-                                </small>
-                            </div>
-
-                            <div class="comments__form-control _error">
-                                <label for="email" class="comments__form-label">E-mail</label>
-                                <input type="text" name="email" id="email" class="comments__form-inp inp"
-                                    placeholder="Ваш email">
-                                <small class="comments__form-error">
-                                    <img src="img/icons/error-circle.svg" alt="error">
-                                    Неверный E-mail
-                                </small>
-                            </div>
+                            @@loop("components/_form-controller.html", "../json/articles/inputs.json")
 
                             <div class="comments__form-control">
                                 <label for="email" class="comments__form-label">Комментарий</label>
                                 <textarea name="comment" id="comment" cols="30" rows="10"
-                                    class="comments__form-textarea textarea" placeholder="Ваш комментарий"></textarea>
+                                    class="comments__form-textarea inp textarea" placeholder="Ваш комментарий"></textarea>
                                 <small class="comments__form-error">
+                                    <img src="img/icons/error-circle.svg" alt="error">
                                     Error message
                                 </small>
                             </div>
@@ -374,120 +120,10 @@
                 <!-- * COMMENTS ITEMS-->
 
                 <div class="comments-items__cont">
-
-                    <div class="comments-item">
-                        <div class="comments-item__header">
-                            <div class="comments-item__name">Андрей Иванов</div>
-                            <div class="comments-item__date label">22 часа, 12 минут назад</div>
-                        </div>
-
-                        <div class="comments-item__text text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Id velit ut tortor pretium viverra.
-                        </div>
-                        <a href="#" class="comments-item__btn navlink">Ответить</a>
-                    </div>
-
-                    <div class="comments-item">
-                        <div class="comments-item__header">
-                            <div class="comments-item__name">Андрей Иванов</div>
-                            <div class="comments-item__date label">22 часа, 12 минут назад</div>
-                        </div>
-
-                        <div class="comments-item__text text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Id velit ut tortor pretium viverra.
-                        </div>
-                        <a href="#" class="comments-item__btn navlink">Ответить</a>
-                    </div>
-
-                    <div class="comments-item">
-                        <div class="comments-item__header">
-                            <div class="comments-item__name">Андрей Иванов</div>
-                            <div class="comments-item__date label">22 часа, 12 минут назад</div>
-                        </div>
-
-                        <div class="comments-item__text text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Id velit ut tortor pretium viverra.
-                        </div>
-                        <a href="#" class="comments-item__btn navlink">Ответить</a>
-                    </div>
-
-                    <!-- * Comments items--answer -->
-
-                    <div class="comments-item comments-item--answer">
-                        <div class="comments-item__header">
-                            <div class="comments-item__name">Андрей Иванов</div>
-                            <div class="comments-item__date label">22 часа, 12 минут назад</div>
-                        </div>
-
-                        <div class="comments-item__text text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Id velit ut tortor pretium viverra.
-                        </div>
-                        <a href="#" class="comments-item__btn navlink">Ответить</a>
-                    </div>
-
-                    <div class="comments-item comments-item--answer">
-                        <div class="comments-item__header">
-                            <div class="comments-item__name">Андрей Иванов</div>
-                            <div class="comments-item__date label">22 часа, 12 минут назад</div>
-                        </div>
-
-                        <div class="comments-item__text text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Id velit ut tortor pretium viverra.
-                        </div>
-                        <a href="#" class="comments-item__btn navlink">Ответить</a>
-                    </div>
-
-                    <div class="comments-item">
-                        <div class="comments-item__header">
-                            <div class="comments-item__name">Андрей Иванов</div>
-                            <div class="comments-item__date label">22 часа, 12 минут назад</div>
-                        </div>
-
-                        <div class="comments-item__text text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Id velit ut tortor pretium viverra.
-                        </div>
-                        <a href="#" class="comments-item__btn navlink">Ответить</a>
-                    </div>
-
-                    <div class="comments-item">
-                        <div class="comments-item__header">
-                            <div class="comments-item__name">Андрей Иванов</div>
-                            <div class="comments-item__date label">22 часа, 12 минут назад</div>
-                        </div>
-
-                        <div class="comments-item__text text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Id velit ut tortor pretium viverra.
-                        </div>
-                        <a href="#" class="comments-item__btn navlink">Ответить</a>
-                    </div>
+                    @@loop("components/_article-comment.html", "../json/articles/comment-item.json")
 
                     <form action="#" class="comments__form comments__form--answer">
-                        <div class="comments__form-control">
-                            <label for="username" class="comments__form-label">Имя</label>
-                            <input type="text" name="username" id="username" class="comments__form-inp inp"
-                                placeholder="Ваше имя">
-                            <small class="comments__form-error">
-                                <img src="img/icons/error-circle.svg" alt="error">
-                                Error message
-                            </small>
-                        </div>
-
-                        <div class="comments__form-control _error">
-                            <label for="email" class="comments__form-label">E-mail</label>
-                            <input type="text" name="email" id="email" class="comments__form-inp inp"
-                                placeholder="Ваш email">
-                            <small class="comments__form-error">
-                                <img src="img/icons/error-circle.svg" alt="error">
-                                Неверный E-mail
-                            </small>
-                        </div>
+                        @@loop("components/_form-controller.html", "../json/articles/inputs.json")
 
                         <div class="comments__form-control">
                             <label for="email" class="comments__form-label">Комментарий</label>

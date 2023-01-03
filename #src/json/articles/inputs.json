@@ -1,0 +1,22 @@
+[
+    {
+        "errClass": "",
+        "label": "Имя",
+        "type": "text",
+        "id": "username",
+        "placeholder": "Ваше имя",
+        "imgPath": "img/icons/error-circle.svg",
+        "imgAlt": "error",
+        "errMessage": "Error message"
+    },
+    {
+        "errClass": "_error",
+        "label": "E-mail",
+        "type": "email",
+        "id": "mail",
+        "placeholder": "Ваш E-mail",
+        "imgPath": "img/icons/error-circle.svg",
+        "imgAlt": "error",
+        "errMessage": "Неверный E-mail"
+    }
+]

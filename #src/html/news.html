@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('_head.html',{
-"title":"Авиабилеты"
+"title":"Новости"
 })
 
 <body>
@@ -72,7 +72,6 @@
                     </section>
 
                     <!-- * NEWS ASIDE -->
-
                     <aside class="news-aside">
                         <div class="aside__inner">
                             <div class="secondary-post">
@@ -100,8 +99,11 @@
                 <section class="news-items">
                     <!-- * News nav -->
                     @@include('components/_news-categories.html', {
+                        "isActive1": "",
                         "label1": "Новости",
+                        "isActive2": "_active",
                         "label2": "Свежие",
+                        "isActive3": "",
                         "label3": "Популярное"
                     })
                     <!-- * News cards -->
