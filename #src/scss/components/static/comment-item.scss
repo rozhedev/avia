@@ -3,6 +3,10 @@
     padding-bottom: 15px;
     border-bottom: $divider;
 
+    &:last-of-type {
+        border-bottom: none;
+        margin-bottom: 5rem;
+    }
     &__name {
         font-size: 18px;
         line-height: 1.4;

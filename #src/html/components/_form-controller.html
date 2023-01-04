@@ -1,9 +1,15 @@
 <div class="comments__form-control @@errClass">
     <label for="@@id" class="comments__form-label">@@label</label>
-    <input type="@@type" name="@@id" id="@@id" class="comments__form-inp inp"
-        placeholder="@@placeholder">
+    @@if(isInput == "true") {
+        <input type="@@type" name="@@id" id="@@id" class="comments__form-inp inp"
+            placeholder="@@placeholder">
+    }
+    @@if(isTextarea == "true") {
+        <textarea name="@@id" id="@@id" cols="30" rows="10"
+        class="comments__form-textarea inp textarea" placeholder="@@placeholder"></textarea>
+    }
     <small class="comments__form-error">
-        <img src="@@imgPath" alt="@@imgAlt">
+        <img src="img/icons/error-circle.svg" alt="error">
         @@errMessage
     </small>
 </div>

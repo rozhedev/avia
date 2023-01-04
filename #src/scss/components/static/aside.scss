@@ -75,6 +75,10 @@
                 justify-content: start !important;
                 flex-wrap: wrap;
             }
+            @media screen and (max-width: $littleTablet + px) {
+                flex-direction: column;
+                justify-content: center;
+            }
         }
         &-body {
             @media screen and (max-width: $littleTablet + px) {

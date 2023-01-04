@@ -1,0 +1,46 @@
+[
+    {
+        "label": "Наука и технологии",
+        "isAsideLink": "aside__menu-link"
+    },
+    {
+        "label": "Общество",
+        "isAsideLink": "aside__menu-link"
+    },
+    {
+        "label": "Наука и технологии",
+        "isAsideLink": "aside__menu-link"
+    },
+    {
+        "label": "Рейтинги",
+        "isAsideLink": "aside__menu-link"
+    },
+    {
+        "label": "Общество",
+        "isAsideLink": "aside__menu-link"
+    },
+    {
+        "label": "Политика",
+        "isAsideLink": "aside__menu-link"
+    },
+    {
+        "label": "Преступность и право",
+        "isAsideLink": "aside__menu-link"
+    },
+    {
+        "label": "Спорт",
+        "isAsideLink": "aside__menu-link"
+    },
+    {
+        "label": "Религия",
+        "isAsideLink": "aside__menu-link"
+    },
+    {
+        "label": "Экономика и развитие",
+        "isAsideLink": "aside__menu-link"
+    },
+    {
+        "label": "Спорт",
+        "isAsideLink": "aside__menu-link"
+    }
+]
