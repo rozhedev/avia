@@ -66,43 +66,52 @@
     <button class="news-categories__item _active">Туда и обратно</button>
     <button class="news-categories__item _hide"></button>
 </nav>
-                                    <div class="select-container">
-                                        <form action="" method="get">
-                                            <select aria-label="transplants" name="transplants" id="transplants" class="inp select search-table__choose-item">
+                                    <form action="" method="get">
+                                        <div class="select-container">
+                                            <select aria-label="transplants" name="transplants" id="transplants" class="inp search-table-select">
                                                 <option value="transplant1">Пересадка 1</option>
                                                 <option value="transplant2">Пересадка 2</option>
                                                 <option value="transplant3">Пересадки 3</option>
                                             </select>
-                                        </form>
-                                    </div>
+                                        </div>
+                                    </form>
 
-                                    <div class="select-container">
-                                        <form action="" method="get">
-                                            <select aria-label="companies" name="companies" id="companies" class="inp select search-table__choose-item">
+                                    <form action="" method="get">
+                                        <div class="select-container">
+                                            <select aria-label="companies" name="companies" id="companies" class="inp search-table-select">
                                                 <option value="company1">Авиакомпания 1</option>
                                                 <option value="company2">Авиакомпания 2</option>
                                                 <option value="company3">Авиакомпания 3</option>
                                             </select>
-                                        </form>
-                                    </div>
+                                        </div>
+                                    </form>
                                 </div>
+
                                 <div class="search-table__params">
-                                    <input type="text" name="from-inp" id="from-inp" class="inp search-table__params-inp" placeholder="Откуда едим">
-                                    <button class="search-table__params-btn">
-                                        <img src="img/icons/main/arrows.svg" alt="arrows">
-                                    </button>
-                                    <input type="text" name="to-inp" id="to-inp" class="inp search-table__params-inp" placeholder="Куда едим">
+                                    <div class="search-table__content">
+                                        <input type="text" name="from-inp" id="from-inp" class="inp search-table__params-inp" placeholder="Откуда едим">
+                                        <button class="search-table__params-btn">
+                                            <img src="img/icons/main/arrows.svg" alt="arrows">
+                                        </button>
+                                        <input type="text" name="to-inp" id="to-inp" class="inp search-table__params-inp" placeholder="Куда едим">
+                                    </div>
 
                                     <div class="select-container">
-                                        <form action="" method="get">
-                                            <select aria-label="person-count" name="person-count" id="person-count" class="inp select search-table__choose-item">
-                                                <option value="" selected>1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                            </select>
-                                        </form>
+                                        <select aria-label="person-count" name="person-count" id="person-count" class="inp seach-table-select">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
                                     </div>
+
+                                    <div class="search-table__content">
+                                        <input type="date" name="from-inp" id="from-inp" class="inp search-table__params-inp" data-placeholder="Туда" required aria-required="true">
+
+                                        <input type="date" name="to-inp" id="to-inp" class="inp search-table__params-inp" data-placeholder="Обратно" required aria-required="true">
+                                    </div>
+
+                                    <button type="button" class="btn" disabled>Найти</button>
                                 </div>
                             </div>
                         </div>

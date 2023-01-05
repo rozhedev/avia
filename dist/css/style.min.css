@@ -308,13 +308,13 @@ body._lock {
 }
 
 .label {
-  font-size: 14px;
+  font-size: 0.8rem;
   line-height: 1.3;
   color: #A7B0BC;
 }
 
 .medium-label {
-  font-size: 14px;
+  font-size: 0.8rem;
   line-height: 1.3;
   font-weight: 500;
   color: #161C25;
@@ -323,9 +323,9 @@ body._lock {
 .btn {
   display: block;
   background-color: #007AFF;
-  border-radius: 26px;
-  padding: 15px 28px;
-  font-size: 16px;
+  border-radius: 999px;
+  padding: 0.95rem 1.75rem;
+  font-size: 1rem;
   line-height: 1.2;
   text-align: center;
   color: #FFFFFF;
@@ -338,16 +338,31 @@ body._lock {
 .btn:active {
   background-color: #0062cc;
 }
+.btn:disabled {
+  background-color: #E5E8EC;
+  color: #A7B0BC;
+}
 
 .inp {
   padding: 15px 20px;
-  border-radius: 52px;
+  border-radius: 999px;
   border: 1px solid #E5E8EC;
   font-family: "SFProDisplay";
+  line-height: 1.2;
   transition: 0.6s all;
 }
 .inp:focus {
   border: 1px solid #007AFF;
+}
+
+input[type=date]::before {
+  content: attr(data-placeholder);
+  width: 90%;
+}
+
+input[type=date]:focus::before,
+input[type=date]:valid::before {
+  display: none;
 }
 
 .textarea {
@@ -1355,6 +1370,9 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
 }
+.comments__form-nav .comments__form-selected img {
+  cursor: pointer;
+}
 @media screen and (max-width: 527.98px) {
   .comments__form-nav {
     flex-direction: column;
@@ -1481,6 +1499,7 @@ html::-webkit-scrollbar-thumb {
   background-color: #E5E8EC;
   border-radius: 999px;
   margin-bottom: 40px;
+  padding: 0rem 0.15rem;
 }
 .news-categories__item {
   font-family: "SFProDisplay";
@@ -1571,9 +1590,13 @@ html::-webkit-scrollbar-thumb {
 
 .select {
   position: relative;
-  font-size: 1rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.4rem 0.5rem 0.4rem 0.75rem;
+  border-radius: 52px;
+  border: 1px solid #E5E8EC;
   cursor: pointer;
+}
+.select:focus {
+  border: 1px solid #007AFF;
 }
 .select__item {
   position: relative;
@@ -1582,7 +1605,6 @@ html::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 .select__value, .select__options {
-  font-weight: 600;
   line-height: 1.6;
   letter-spacing: 0.02em;
 }
@@ -1601,27 +1623,39 @@ html::-webkit-scrollbar-thumb {
 .select__value::before {
   content: "";
   display: inline-block;
-  margin-left: 4px;
-  width: 24px;
-  height: 24px;
+  margin-left: 0.2rem;
+  width: 1rem;
+  height: 1rem;
   background: url("../../img/icons/main/chevron.svg") center/100% no-repeat;
   transition: 0.6s all;
 }
 .select__options {
   display: none;
   position: absolute;
-  top: 30px;
-  left: 0;
+  top: 2rem;
+  left: -0.8rem;
+  width: 118%;
   background-color: #FFFFFF;
+  border-left: 1px solid #E5E8EC;
+  border-right: 1px solid #E5E8EC;
+  border-bottom: 1px solid #E5E8EC;
+  border-radius: 0 0 15px 15px;
 }
 .select__option {
-  padding: 0px 12px;
+  padding: 0px 0.25rem;
   text-align: center;
-  border-top: 1px solid #161C25;
   cursor: pointer;
+  transition: 0.6s all;
+}
+.select__option:not(:first-of-type) {
+  border-top: 1px solid #E5E8EC;
+}
+.select__option:hover {
+  color: #007AFF;
 }
 .select._active {
   z-index: 5;
+  border-radius: 20px 20px 0 0;
 }
 .select._active .select__value::before {
   transform: rotate(-180deg);
@@ -1664,8 +1698,47 @@ html::-webkit-scrollbar-thumb {
 .search-table__params {
   display: flex;
 }
+.search-table__params > * {
+  margin-right: 20px;
+}
+.search-table__params .search-table__content > input:first-of-type {
+  border-radius: 999px 0 0 999px;
+}
+.search-table__params .search-table__content > input:last-of-type {
+  margin-left: -4px;
+  border-radius: 0 999px 999px 0;
+}
+.search-table__params-btn {
+  margin-left: -4px;
+  padding: 1.2rem;
+}
 .search-table__params .select {
   padding: 1rem 1.25rem;
+}
+.search-table__params .select__options {
+  top: 2.63rem;
+  left: -1.33rem;
+  width: 257%;
+  background-color: #FFFFFF;
+  border-left: 1px solid #E5E8EC;
+  border-right: 1px solid #E5E8EC;
+  border-bottom: 1px solid #E5E8EC;
+  border-radius: 0 0 15px 15px;
+}
+.search-table__params .select__option {
+  padding: 0px 0.25rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.6s all;
+}
+.search-table__params .select__option:not(:first-of-type) {
+  border-top: 1px solid #E5E8EC;
+}
+.search-table__params .select__option:hover {
+  color: #007AFF;
+}
+.search-table__params .inp {
+  padding: 1.2rem 1.75rem;
 }
 
 .home {

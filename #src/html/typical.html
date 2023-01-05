@@ -55,9 +55,6 @@
                     </div>
 
                     <div class="article-content__cont">
-
-                        <!-- * СОДЕРЖАНИЕ -->
-
                         <div class="article-content">
                             <h1 class="h1">Содержание</h1>
                             <div class="article-content__inner">
@@ -91,9 +88,10 @@
                     <div class="comments">
                         <h2 class="h1">Коментарии</h2>
 
-                        <!-- * Comments form -->
                         <form action="#" class="comments__form">
                             @@loop("components/_form-controller.html", "../json/articles/form-controllers.json")
+
+                            <!-- * form-nav contain button -->
                             @@include("components/_form-nav.html", {
                                 "href": "#",
                                 "authorName": "Иван Смирнов"
@@ -102,12 +100,13 @@
                     </div>
                 </div>
 
-                <!-- * COMMENTS ITEMS-->
                 <div class="comments-items__cont">
                     @@loop("components/_article-comment.html", "../json/articles/comment-item.json")
 
                     <form action="#" class="comments__form comments__form--answer">
                         @@loop("components/_form-controller.html", "../json/articles/form-controllers.json")
+
+                        <!-- * form-nav contain button -->
                         @@include("components/_form-nav.html", {
                             "href": "#",
                             "authorName": "Иван Смирнов"

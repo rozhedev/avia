@@ -1,6 +1,7 @@
 "use strict"
 
 @@include("./components/regular.js", {})
+@@include("./components/select.js", {})
 @@include("./components/preloader.js", {})
 @@include("./components/burger.js", {})
 @@include("./components/readmore.js", {})

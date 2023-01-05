@@ -33,15 +33,53 @@
     &__params {
         display: flex;
 
+        & > * {
+            margin-right: 20px;
+        }
+        .search-table__content {
+            & > input:first-of-type {
+                border-radius: 999px 0 0 999px;
+            }
+            & > input:last-of-type {
+                margin-left: -4px;
+                border-radius: 0 999px 999px 0;
+            }
+        }
+        &-btn {
+            margin-left: -4px;
+            padding: 1.2rem;
+        }
+
+        // * SELECT
         .select {
             padding: 1rem 1.25rem;
+
+            &__options {
+                // * Hard styling
+                top: 2.63rem;
+                left: -1.33rem;
+                width: 257%;
+                background-color: $white; // * Hiding text above select
+                border-left: 1px solid $lightGrey;
+                border-right: 1px solid $lightGrey;
+                border-bottom: 1px solid $lightGrey;
+                border-radius: 0 0 15px 15px;
+            }
+            &__option {
+                padding: 0px 0.25rem;
+                text-align: center;
+                cursor: pointer;
+                transition: $transition;
+                &:not(:first-of-type) {
+                    border-top: 1px solid $lightGrey;
+                }
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+        .inp {
+            padding: 1.2rem 1.75rem;
         }
     }
-
-    // &__transplants {
-    // }
-    // .select {
-    // }
-    // &__companies {
-    // }
 }

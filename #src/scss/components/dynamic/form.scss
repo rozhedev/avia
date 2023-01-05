@@ -32,6 +32,9 @@
             display: flex;
             justify-content: center;
 
+            .comments__form-selected img {
+                cursor: pointer;
+            }
             @media screen and (max-width: $phone + px) {
                 flex-direction: column;
             }
