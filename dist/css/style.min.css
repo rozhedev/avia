@@ -1664,6 +1664,10 @@ html::-webkit-scrollbar-thumb {
   display: block;
 }
 
+option._hide {
+  display: none;
+}
+
 .search-table {
   width: 100%;
   position: absolute;
@@ -1718,7 +1722,7 @@ html::-webkit-scrollbar-thumb {
 .search-table__params .select__options {
   top: 2.63rem;
   left: -1.33rem;
-  width: 257%;
+  width: 260%;
   background-color: #FFFFFF;
   border-left: 1px solid #E5E8EC;
   border-right: 1px solid #E5E8EC;
@@ -1736,6 +1740,9 @@ html::-webkit-scrollbar-thumb {
 }
 .search-table__params .select__option:hover {
   color: #007AFF;
+}
+.search-table__params .select._active {
+  border-radius: 30px 30px 0 0;
 }
 .search-table__params .inp {
   padding: 1.2rem 1.75rem;

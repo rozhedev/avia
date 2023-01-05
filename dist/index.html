@@ -59,34 +59,32 @@
                         <!-- * SEARCH TABLE -->
 
                         <div class="search-table">
-                            <div class="search-table__inner">
+                            <form action="" method="post" class="search-table__inner">
                                 <div class="search-table__choose">
                                     <nav class="news-categories">
     <button class="news-categories__item ">В одну сторону</button>
     <button class="news-categories__item _active">Туда и обратно</button>
     <button class="news-categories__item _hide"></button>
 </nav>
-                                    <form action="" method="get">
-                                        <div class="select-container">
-                                            <select aria-label="transplants" name="transplants" id="transplants" class="inp search-table-select">
-                                                <option value="transplant1">Пересадка 1</option>
-                                                <option value="transplant2">Пересадка 2</option>
-                                                <option value="transplant3">Пересадки 3</option>
-                                            </select>
-                                        </div>
-                                    </form>
 
-                                    <form action="" method="get">
-                                        <div class="select-container">
-                                            <select aria-label="companies" name="companies" id="companies" class="inp search-table-select">
-                                                <option value="company1">Авиакомпания 1</option>
-                                                <option value="company2">Авиакомпания 2</option>
-                                                <option value="company3">Авиакомпания 3</option>
-                                            </select>
-                                        </div>
-                                    </form>
+                                    <div class="select-container">
+    <select aria-label="transplants" name="transplants" id="transplants" class="inp search-table-select">
+        <option value="transplant1">Пересадка 1</option>
+        <option value="transplant2">Пересадка 2</option>
+        <option class="@isHide3" value="transplant3">Пересадка 3</option>
+        <option class="@isHide4" value=""></option>
+    </select>
+</div>
+
+                                    <div class="select-container">
+    <select aria-label="companies" name="companies" id="companies" class="inp search-table-select">
+        <option value="company1">Авиакомпания 1</option>
+        <option value="company2">Авиакомпания 2</option>
+        <option class="@isHide3" value="company3">Авиакомпания 3</option>
+        <option class="@isHide4" value=""></option>
+    </select>
+</div>
                                 </div>
-
                                 <div class="search-table__params">
                                     <div class="search-table__content">
                                         <input type="text" name="from-inp" id="from-inp" class="inp search-table__params-inp" placeholder="Откуда едим">
@@ -97,13 +95,13 @@
                                     </div>
 
                                     <div class="select-container">
-                                        <select aria-label="person-count" name="person-count" id="person-count" class="inp seach-table-select">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                        </select>
-                                    </div>
+    <select aria-label="person-count" name="person-count" id="person-count" class="inp search-table-select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option class="@isHide3" value="3">3</option>
+        <option class="@isHide4" value="4">4</option>
+    </select>
+</div>
 
                                     <div class="search-table__content">
                                         <input type="date" name="from-inp" id="from-inp" class="inp search-table__params-inp" data-placeholder="Туда" required aria-required="true">
@@ -113,7 +111,7 @@
 
                                     <button type="button" class="btn" disabled>Найти</button>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </section>
