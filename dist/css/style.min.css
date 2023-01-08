@@ -100,7 +100,7 @@ html {
 html,
 body {
   height: 100%;
-  min-width: 351.98px;
+  min-width: 343.98px;
 }
 
 body {
@@ -217,7 +217,7 @@ body._lock {
 }
 @media (max-width: 527.98px) {
   ._container {
-    max-width: 351.98px;
+    max-width: 343.98px;
   }
 }
 
@@ -358,6 +358,11 @@ body._lock {
 input[type=date]::before {
   content: attr(data-placeholder);
   width: 90%;
+}
+@media screen and (max-width: 527.98px) {
+  input[type=date]::before {
+    width: 95%;
+  }
 }
 
 input[type=date]:focus::before,
@@ -737,6 +742,7 @@ input[type=date]:valid::before {
 }
 .comments-item__text {
   margin: 12px 0 14px;
+  text-align: justify;
 }
 .comments-item__btn {
   font-weight: 500;
@@ -1230,18 +1236,74 @@ input[type=date]:valid::before {
 }
 
 .advantages-item {
-  width: 298px;
-  height: 266px;
-  padding: 32px 18px 18px 18px;
+  width: 296px;
+  min-height: 266px;
+  padding: 2rem 18px 18px 18px;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 0 45px rgba(0, 122, 255, 0.09);
+}
+@media screen and (max-width: 1279.98px) {
+  .advantages-item:nth-child(-n+4) {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 727.98px) {
+  .advantages-item {
+    box-shadow: 0 0 24px rgba(0, 122, 255, 0.09);
+  }
+}
+@media screen and (max-width: 727.98px) {
+  .advantages-item {
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 0 24px rgba(0, 122, 255, 0.09);
+  }
 }
 .advantages-item__title {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.2;
   margin: 27px 0 12px;
+}
+
+.airlines-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #E5E8EC;
+}
+@media screen and (max-width: 1279.98px) {
+  .airlines-item {
+    flex-direction: column;
+    border-bottom: none;
+  }
+}
+.airlines-item__name {
+  background-color: #FFFFFF;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  margin-bottom: -10px;
+}
+@media screen and (max-width: 1279.98px) {
+  .airlines-item__name {
+    padding-right: 0px;
+    margin-bottom: 0px;
+  }
+}
+.airlines-item__cost {
+  background-color: #FFFFFF;
+  color: #007AFF;
+  padding-left: 10px;
+  margin-bottom: -10px;
+}
+@media screen and (max-width: 1279.98px) {
+  .airlines-item__cost {
+    margin-top: 12px;
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
 }
 
 .preloader {
@@ -1669,13 +1731,28 @@ option._hide {
 }
 
 .search-table {
-  width: 100%;
   position: absolute;
-  top: 398px;
+  top: 395px;
   left: 0;
   background-color: #FFFFFF;
   border-radius: 15px;
-  padding: 10px 36px;
+  padding: 0.625rem 2.25rem;
+}
+@media screen and (max-width: 1279.98px) {
+  .search-table {
+    top: 316px;
+  }
+}
+@media screen and (max-width: 959.98px) {
+  .search-table {
+    padding: 0.625rem;
+    box-shadow: 0 0 24px rgba(0, 122, 255, 0.09);
+  }
+}
+@media screen and (max-width: 727.98px) {
+  .search-table {
+    top: 220px;
+  }
 }
 .search-table__inner {
   padding: 30px 0;
@@ -1692,8 +1769,14 @@ option._hide {
   border-radius: 0px 0px 9px 9px;
   background-color: #32A92F;
 }
+@media screen and (max-width: 1279.98px) {
+  .search-table__choose, .search-table__params {
+    justify-content: center;
+  }
+}
 .search-table__choose {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
 }
 .search-table__choose > * {
@@ -1701,9 +1784,23 @@ option._hide {
 }
 .search-table__params {
   display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 727.98px) {
+  .search-table__params {
+    margin-top: 40px;
+  }
 }
 .search-table__params > * {
   margin-right: 20px;
+}
+@media screen and (max-width: 727.98px) {
+  .search-table__params > * {
+    margin-right: 0px;
+  }
+}
+.search-table__params > button:last-of-type {
+  margin-right: 0px;
 }
 .search-table__params .search-table__content > input:first-of-type {
   border-radius: 999px 0 0 999px;
@@ -1712,12 +1809,33 @@ option._hide {
   margin-left: -4px;
   border-radius: 0 999px 999px 0;
 }
-.search-table__params-btn {
-  margin-left: -4px;
-  padding: 1.2rem;
+@media screen and (max-width: 527.98px) {
+  .search-table__params .search-table__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .search-table__params .search-table__content > input:first-of-type, .search-table__params .search-table__content > input:last-of-type {
+    border-radius: 999px;
+  }
+  .search-table__params .search-table__content:last-of-type > input:not(:first-of-type) {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .search-table__params .search-table__content:last-of-type,
+.search-table__params .btn {
+    margin-top: 40px;
+  }
 }
 .search-table__params .select {
   padding: 1rem 1.25rem;
+}
+@media screen and (max-width: 727.98px) {
+  .search-table__params .select {
+    margin-top: 40px;
+  }
 }
 .search-table__params .select__options {
   top: 2.63rem;
@@ -1747,57 +1865,134 @@ option._hide {
 .search-table__params .inp {
   padding: 1.2rem 1.75rem;
 }
+@media screen and (max-width: 727.98px) {
+  .search-table__params .inp {
+    padding: 1.2rem 1.33rem;
+  }
+}
+.search-table .search-table__params-btn {
+  margin-left: -4px;
+  padding: 1.2rem;
+}
 
 .home {
   background: url("../img/photos/main/home_bg.jpg") center/cover no-repeat;
   height: 800px;
 }
+@media screen and (max-width: 1279.98px) {
+  .home {
+    height: 640px;
+  }
+}
 .home__inner {
   position: relative;
 }
 .home__titles {
-  width: 662px;
   position: absolute;
   top: 80px;
   left: 0;
+}
+@media screen and (max-width: 727.98px) {
+  .home__titles {
+    top: 40px;
+  }
 }
 .home__title, .home__suptitle {
   color: #FFFFFF;
 }
 .home__title {
   font-weight: bold;
-  font-size: 70px;
+  font-size: 4.375rem;
   line-height: 130%;
   text-shadow: 0px 7px 16px rgba(0, 0, 0, 0.12);
+}
+@media screen and (max-width: 1279.98px) {
+  .home__title {
+    font-size: 3.5rem;
+    text-shadow: 0px 5px 13px rgba(0, 0, 0, 0.12);
+  }
+}
+@media screen and (max-width: 727.98px) {
+  .home__title {
+    font-size: 2.3rem;
+  }
 }
 .home__suptitle {
   font-style: normal;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 1.875rem;
   line-height: 120%;
+}
+@media screen and (max-width: 1279.98px) {
+  .home__suptitle {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 727.98px) {
+  .home__suptitle {
+    font-size: 1.25rem;
+  }
 }
 
 .advantages {
-  margin-top: -77px;
+  margin-top: -80px;
+}
+@media screen and (max-width: 1279.98px) {
+  .advantages {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 727.98px) {
+  .advantages {
+    margin-top: 280px;
+  }
+}
+@media screen and (max-width: 527.98px) {
+  .advantages {
+    margin-top: 480px;
+  }
 }
 .advantages__inner {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .faq {
-  margin-top: 217px;
+  margin-top: 140px;
+}
+@media screen and (max-width: 1279.98px) {
+  .faq {
+    margin-top: 112px;
+  }
 }
 .faq__content {
   display: grid;
-  grid-template: repeat(4, 1fr)/repeat(2, 1fr);
+  grid-template: repeat(3, 1fr)/repeat(2, 1fr);
   grid-auto-flow: 1fr/repeat(2, 1fr);
   margin-top: 35px;
 }
+@media screen and (max-width: 959.98px) {
+  .faq__content {
+    grid-template: repeat(3, 1fr)/1fr;
+    grid-auto-flow: 1fr/1fr;
+  }
+}
 
 .faq-item {
-  width: 625px;
+  width: 622px;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 1279.98px) {
+  .faq-item {
+    width: 441.99px;
+  }
+}
+@media screen and (max-width: 959.98px) {
+  .faq-item {
+    width: 100%;
+    text-align: justify;
+  }
 }
 .faq-item:nth-of-type(2n + 1) {
   margin-right: 30px;
@@ -1809,31 +2004,34 @@ option._hide {
 .airlines {
   margin: 140px 0;
 }
+@media screen and (max-width: 1279.98px) {
+  .airlines {
+    margin: 112px 0;
+  }
+}
 .airlines__content {
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template: 1fr/repeat(3, 1fr);
+  grid-auto-flow: 1fr/repeat(3, 1fr);
   grid-gap: 30px;
 }
-
-.airlines-item {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px dashed #E5E8EC;
+@media screen and (max-width: 1279.98px) {
+  .airlines__content {
+    grid-gap: 30px 24px;
+  }
 }
-.airlines-item__name {
-  background-color: #FFFFFF;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  padding-right: 10px;
-  margin-bottom: -10px;
+@media screen and (max-width: 959.98px) {
+  .airlines__content {
+    grid-template: 1fr/repeat(2, 1fr);
+    grid-auto-flow: 1fr/repeat(2, 1fr);
+  }
 }
-.airlines-item__cost {
-  background-color: #FFFFFF;
-  color: #007AFF;
-  padding-left: 10px;
-  margin-bottom: -10px;
+@media screen and (max-width: 527.98px) {
+  .airlines__content {
+    grid-template: 1fr/1fr;
+    grid-auto-flow: 1fr/1fr;
+  }
 }
 
 .news-posts__cont {
@@ -1904,6 +2102,11 @@ option._hide {
 }
 .article-text__cont {
   margin-top: 50px;
+}
+@media screen and (max-width: 727.98px) {
+  .article-text__cont p {
+    text-align: justify;
+  }
 }
 .article__activity-cont2 {
   margin-top: 30px;

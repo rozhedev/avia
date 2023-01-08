@@ -1,21 +1,31 @@
+// * On $bigTablet adaptive all values reduces by one-fifth
+// * On $foldPhone adaptive all values reduces by one-third
+
 .search-table {
-    width: 100%;
     position: absolute;
-    top: 398px;
+    top: 395px;
     left: 0;
     background-color: $white;
     border-radius: 15px;
-    padding: 10px 36px;
+    padding: 0.625rem 2.25rem;
 
-    // TODO Create adaptives
-
+    @media screen and (max-width: $bigTablet + px) {
+        top: 316px;
+    }
+    @media screen and (max-width: $littleTablet + px) {
+        padding: 0.625rem;
+        box-shadow: 0 0 24px rgba(0, 122, 255, 0.09);
+    }
+    @media screen and (max-width: $foldPhone + px) {
+        top: 220px;
+    }
     &__inner {
         padding: 30px 0;
         border-top: $divider;
         border-bottom: $divider;
 
         &::before {
-            content: "";
+            content: '';
             display: block;
             transform: translateY(-30px);
             margin: 0px auto;
@@ -25,8 +35,16 @@
             background-color: $green;
         }
     }
+
+    @media screen and (max-width: $bigTablet + px) {
+        &__choose,
+        &__params {
+            justify-content: center;
+        }
+    }
     &__choose {
         display: flex;
+        flex-wrap: wrap;
         align-items: flex-start;
         & > * {
             margin-right: 14px;
@@ -34,9 +52,20 @@
     }
     &__params {
         display: flex;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: $foldPhone + px) {
+            margin-top: 40px;
+        }
 
         & > * {
             margin-right: 20px;
+            @media screen and (max-width: $foldPhone + px) {
+                margin-right: 0px;
+            }
+        }
+        & > button:last-of-type {
+            margin-right: 0px;
         }
         .search-table__content {
             & > input:first-of-type {
@@ -46,15 +75,34 @@
                 margin-left: -4px;
                 border-radius: 0 999px 999px 0;
             }
+            @media screen and (max-width: $phone + px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                // * Use this tweak because of selector specificity
+                & > input:first-of-type, & > input:last-of-type {
+                    border-radius: 999px;
+                }
+                &:last-of-type > input:not(:first-of-type) {
+                    margin-top: 40px;
+                }
+            }
         }
-        &-btn {
-            margin-left: -4px;
-            padding: 1.2rem;
+
+        @media screen and (max-width: $bigTablet + px) {
+            .search-table__content:last-of-type,
+            .btn {
+                margin-top: 40px;
+            }
         }
 
         // * SELECT
         .select {
             padding: 1rem 1.25rem;
+            @media screen and (max-width: $foldPhone + px) {
+                margin-top: 40px;
+            }
 
             &__options {
                 // * Hard styling
@@ -85,6 +133,14 @@
         }
         .inp {
             padding: 1.2rem 1.75rem;
+
+            @media screen and (max-width: $foldPhone + px) {
+                padding: 1.2rem 1.33rem;
+            }
         }
+    }
+    .search-table__params-btn {
+        margin-left: -4px;
+        padding: 1.2rem;
     }
 }

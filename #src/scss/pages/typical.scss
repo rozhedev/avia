@@ -7,13 +7,19 @@
     @media screen and (max-width: $littleTablet + px) {
         width: 100%;
     }
-    
+
     &-content__cont {
         max-width: 424px;
         margin-top: 30px;
     }
     &-text__cont {
         margin-top: 50px;
+
+        p {
+            @media screen and (max-width: $foldPhone + px) {
+                text-align: justify;
+            }
+        }
     }
     &__activity-cont2 {
         margin-top: 30px;

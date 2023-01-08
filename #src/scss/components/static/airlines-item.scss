@@ -1,0 +1,35 @@
+.airlines-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed $lightGrey;
+
+    @media screen and (max-width: $bigTablet + px) {
+        flex-direction: column;
+        border-bottom: none;
+    }
+    &__name {
+        background-color: $white;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        margin-bottom: -10px;
+
+        @media screen and (max-width: $bigTablet + px) {
+            padding-right: 0px;
+            margin-bottom: 0px;
+        }
+    }
+    &__cost {
+        background-color: $white;
+        color: $blue;
+        padding-left: 10px;
+        margin-bottom: -10px;
+
+        @media screen and (max-width: $bigTablet + px) {
+            margin-top: 12px;
+            padding-left: 0px;
+            margin-bottom: 0px;
+        }
+    }
+}

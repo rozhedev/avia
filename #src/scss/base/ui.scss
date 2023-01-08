@@ -143,6 +143,9 @@
 input[type="date"]::before {
     content: attr(data-placeholder);
     width: 90%;
+    @media screen and (max-width: $phone + px) {
+      width: 95%;
+    }
 }
 
 input[type="date"]:focus::before,

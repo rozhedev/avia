@@ -1,15 +1,31 @@
+$xl-gap: 18px;
+
 .advantages-item {
-    width: 298px;
-    height: 266px;
-    padding: 32px 18px 18px 18px;
+    width: calc($xl / 4 - 30) + px;
+    min-height: 266px;
+    padding: 2rem $xl-gap $xl-gap $xl-gap;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 0 45px rgba(0, 122, 255, 0.09);
-
+    
+    @media screen and (max-width: $bigTablet + px) {
+        &:nth-child(-n + 4) {
+            margin-top: 20px;
+        }
+    }
+    @media screen and (max-width: $foldPhone + px) {
+        box-shadow: 0 0 24px rgba(0, 122, 255, 0.09);
+    }
+    @media screen and (max-width: $foldPhone + px) {
+        width: 100%;
+        text-align: left;
+        box-shadow: 0 0 24px rgba(0, 122, 255, 0.09);
+    }
     &__title {
-        font-size: 18px;
+        font-size: $xl-gap;
         font-weight: 700;
         line-height: 1.2;
         margin: 27px 0 12px;
     }
+
 }
