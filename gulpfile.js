@@ -36,7 +36,6 @@ let path = {
 		css: project_name + "/css/",
 		images: project_name + "/img/",
 		fonts: project_name + "/fonts/",
-		json: project_name + "/json/"
 	},
 	src: {
 		favicon: src_folder + "/img/favicon/favicon.{jpg,png,svg,gif,ico,webp}",
@@ -88,7 +87,7 @@ function html() {
 function css() {
 	return src(path.src.css, {})
 		.pipe(
-			scss({ outputStyle: 'expanded' /*compressed*/ }).on('error', scss.logError)
+			scss({ outputStyle: 'compressed' /*expanded*/ }).on('error', scss.logError)
 		)
 		.pipe(
 			rename({
@@ -100,7 +99,6 @@ function css() {
 }
 function json() {
 	return src(path.src.json, {})
-		.pipe(dest(path.build.json))
 		.pipe(browsersync.stream());
 }
 function js() {
@@ -187,7 +185,7 @@ function cssBuild() {
 	return src(path.src.css, {})
 		.pipe(plumber())
 		.pipe(
-			scss({ outputStyle: 'expanded' /*compressed*/}).on('error', scss.logError)
+			scss({ outputStyle: 'compressed' /*expanded*/}).on('error', scss.logError)
 		)
 		.pipe(group_media())
 		.pipe(

@@ -4,7 +4,6 @@
 // * 3. don't forget setting "value" attribute for all options
 // * 4. For styling uses ".select" class
 
-//Select
 let selects = document.getElementsByTagName('select');
 let slideUpDuration = 400;
 if (selects.length > 0) {
